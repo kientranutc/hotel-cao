@@ -1,0 +1,12 @@
+.news-title {
+    background: #1F3952;
+    padding: 20px 0px;
+    vertical-align: middle;
+}
+.news .news-title h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 26px;
+}

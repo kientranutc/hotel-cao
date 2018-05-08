@@ -1,0 +1,43 @@
+.service-title {
+    background: #1F3952;
+    padding: 20px 0px;
+    vertical-align: middle;
+}
+.service .service-title h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 26px;
+}
+.service .service-content {
+    background-image:url('../img/bg_service.jpg');
+    position: relative;
+    padding-bottom: 30px;
+}
+.service .service-content .item {
+    text-align: center;
+    margin-top: 20px;
+}
+.service .service-content .item img {
+    width: calc(100% - 293px);
+    height: 67px;
+}
+.service .service-content .item h4{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.service .service-content .item p {
+    text-align: justify;
+    font-style: italic;
+    font-size: 17px;
+}
+.service .service-content-ab{
+    position: absolute;
+    background: rgba(0,0,0,0.1);
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}

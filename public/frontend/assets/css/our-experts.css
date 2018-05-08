@@ -1,0 +1,51 @@
+.our-experts-title {
+    background: #1F3952;
+    padding: 20px 0px;
+    vertical-align: middle;
+}
+.our-experts .our-experts-title h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 26px;
+}
+.our-experts-content {
+    padding: 100px 0px;
+    background: #F2F2F2;
+}
+.our-experts-content .item {
+    color: #000000;
+}
+.our-experts-content .img {
+    text-align: right;
+    padding-right: 40px;
+}
+.our-experts-content .item img{
+    width: 220px;
+    height: 320px;
+}
+.our-experts-content .carousel-indicators {
+margin-bottom: -90px;
+}
+.our-experts-content .item  h3{
+    font-weight: 500;
+}
+.our-experts-content .carousel-indicators .active {
+    background-color: #ffffff;
+    border: 2px solid #1F3952;
+    box-sizing: border-box;
+}
+.our-experts-content .carousel-control i.fa{
+    font-size: 50px;
+    color: #1F3952;
+}
+.our-experts-content .carousel-indicators {
+
+}
+.our-experts-content  .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    background-color: #1F3952;
+    border: none;
+}

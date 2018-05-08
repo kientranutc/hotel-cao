@@ -1,0 +1,36 @@
+.projects-title {
+    background: #1F3952;
+    padding: 20px 0px;
+    vertical-align: middle;
+}
+.projects .projects-title h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 26px;
+}
+.projects-content .item {
+    position: relative;
+}
+.projects-content {
+    margin-top: 40px;
+}
+.projects-content .item  .info-project {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    padding: 0px 10px;
+    text-align: center;
+}
+.projects-content .item  .info-project p {
+    margin: 0px;
+    line-height: 3em;
+}
+.projects-content .item  .info-project p:first-child {
+    color: #ffffff;
+    margin-top: 3px;
+}

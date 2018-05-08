@@ -1,0 +1,61 @@
+section#section-value div.title {
+    background: #1F3952;
+    padding: 20px 0px;
+    vertical-align: middle;
+}
+
+section#section-value div.title h3 {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-top: 0.70em;
+    color: #fff;
+}
+
+section#section-value div.content {
+    margin: 100px 0 20px 0;
+}
+
+section#section-value div.content .info {
+    margin: 0 190px;
+}
+
+section#section-value div.content .row {
+    margin-bottom: 40px;
+}
+
+section#section-value div.content .row img.image {
+    width: 100%;
+}
+
+section#section-value div.content .row h3 {
+    text-transform: uppercase;
+    font-family: Asap-Regular;
+    font-size: 33px;
+}
+
+section#section-value div.content .row h3 img {
+    margin-right: 5px;
+}
+
+section#section-value div.content .row ul {
+    display: table-cell;
+    vertical-align: center;
+    margin-top: 10px;
+}
+
+section#section-value div.content .row ul li {
+    list-style: none;
+}
+
+section#section-value div.content .row .col-sm-12 {
+    border: 1px dotted;
+    margin: 0 15px;
+}
+
+section#section-value div.content .row .col-sm-12 .text {
+    margin: 20px;
+}
+
+
+
+
