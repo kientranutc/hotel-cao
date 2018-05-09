@@ -41,6 +41,13 @@
     .banner-content p:first-child {
        display: none;
     }
+    .why-us-value-text {
+        margin: 0px;
+        color: #73726C;
+        border: 1px dotted;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
 
 }
 

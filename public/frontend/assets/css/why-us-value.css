@@ -1,0 +1,46 @@
+#section-why-value .why-value-title  {
+    background: #1F3952;
+    padding: 20px 0px;
+    vertical-align: middle;
+
+}
+#section-why-value .why-value-title h3 {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-top: 0.70em;
+    color: #fff;
+    font-size: 1.9em;
+}
+.why-us-value .item h4 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 33px;
+}
+.why-us-value .item  {
+    color: #73726C;
+    padding: 10px;
+}
+.why-us-value-content {
+    background: #ddd;
+    padding: 10px;
+}
+.why-us-value-content ul {
+    padding: 0px;
+}
+.why-us-value-content ul li {
+    list-style: none;
+    padding: 5px;
+
+}
+.why-us-value-content ul li i {
+    color: green;
+}
+.why-us-value-text {
+    margin: 10px 190px;
+    color: #73726C;
+    border: 1px dotted;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}

@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/our-experts.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/news.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/project.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/value.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/why-us-value.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
 
 </head>
