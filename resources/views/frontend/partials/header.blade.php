@@ -81,12 +81,16 @@
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav">
-                <li><a class="animated fadeInDown" href="index.php">Home </a></li>
-                <li><a class="animated fadeInDown" href="#section-why-us">Why choose us</a></li>
-                <li><a class="animated fadeInDown" href="#our-experts-id">Team</a></li>
-                <li><a class="animated fadeInDown" href="">Service</a></li>
-                <li><a class="animated fadeInDown" href="">News</a></li>
-                <li><a class="animated fadeInDown" href="contact.php">Contact</a></li>
+                <li><a class="animated fadeInDown" href="index.php">@lang('home.menu.home')</a></li>
+                <li><a class="animated fadeInDown" href="#section-why-us">@lang('home.menu.why_choose_us')</a></li>
+                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.team')</a></li>
+                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.service')</a></li>
+                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.news')</a></li>
+                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.contact')</a></li>
+                <li><div class="language">
+                        <a href="{{URL::route('switchLang','en')}}"><img src="{{asset('frontend/assets/img/English.png')}}" alt=""></a>
+                        <a href="{{URL::route('switchLang','vi')}}"><img src="{{asset('frontend/assets/img/vietnamese.png')}}" alt=""></a>
+                    </div></li>
             </ul>
         </div><!-- Wnavbar-collapse -->
     </div><!-- container-fluid -->

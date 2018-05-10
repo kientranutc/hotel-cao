@@ -10,15 +10,21 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/contact', function () {
-    return view('frontend.about');
-});
-Route::get('/', function () {
-    return view('frontend.home');
-});
-Route::get('/admin', function () {
-    return view('backend.layouts.master');
-});
-Route::get('/login', function () {
-    return view('backend.login');
+Route::group(['middleware' => 'localization'], function() {
+    Route::get('language/{la}', [
+        'as' => 'switchLang',
+        'uses' => 'Frontend\LanguageController@postLang',
+    ]);
+    Route::get('/contact', function () {
+        return view('frontend.about');
+    });
+    Route::get('/', function () {
+        return view('frontend.home');
+    });
+    Route::get('/admin', function () {
+        return view('backend.layouts.master');
+    });
+    Route::get('/login', function () {
+        return view('backend.login');
+    });
 });
