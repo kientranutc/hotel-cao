@@ -10,6 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('create-table', [
+    'as' => 'create-table',
+    'uses' => 'Frontend\DatabaseController@createTable',
+]);
 Route::group(['middleware' => 'localization'], function() {
     Route::get('language/{la}', [
         'as' => 'switchLang',

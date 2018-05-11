@@ -71,8 +71,7 @@
             </button>
             <a class="navbar-brand" href="index.php">
           <span class="logo-content">
-              <img src="{{asset('frontend/assets/img/logo.png')}}"  alt="{{asset('frontend/assets/img/logo.png')}}">
-              <span class="title-logo"><b>CAO-Hospitality</b></span>
+              <img src="{{asset('frontend/assets/img/logo_1.jpg')}}"  alt="{{asset('frontend/assets/img/logo_1.jpg')}}">
           </span>
             </a>
         </div>
