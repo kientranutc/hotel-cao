@@ -10,10 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+//---------------------------Database------------------------------------
 Route::get('create-table', [
     'as' => 'create-table',
     'uses' => 'Frontend\DatabaseController@createTable',
 ]);
+//-----------------------------Frontend------------------------------------
 Route::group(['middleware' => 'localization'], function() {
     Route::get('language/{la}', [
         'as' => 'switchLang',
@@ -31,4 +33,13 @@ Route::group(['middleware' => 'localization'], function() {
     Route::get('/login', function () {
         return view('backend.login');
     });
+});
+Route::post('/login',[
+    'as' => 'process-login',
+    'uses' => 'Backend\AuthController@processLogin'
+]);
+
+//---------------------------------Backend---------------------------------
+Route::group(['prefix' => 'admin'], function () {
+
 });

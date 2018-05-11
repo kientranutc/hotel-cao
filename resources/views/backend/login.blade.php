@@ -22,7 +22,7 @@
 <div class="login-wrapper">
     <div class="text-center">
         <h2 class="fadeInUp animation-delay8" style="font-weight:bold">
-            <span class="text-success">Endless</span> <span style="color:#ccc; text-shadow:0 1px #fff">Admin</span>
+            <span class="text-success">CAO</span> <span style="color:#ccc; text-shadow:0 1px #fff">Hospitality</span>
         </h2>
     </div>
     <div class="login-widget animation-delay1">
@@ -33,19 +33,22 @@
                 </div>
 
                 <div class="pull-right">
-                    <span style="font-size:11px;">Don't have any account?</span>
-                    <a class="btn btn-default btn-xs login-link" href="register.html" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Sign up</a>
                 </div>
             </div>
             <div class="panel-body">
-                <form class="form-login">
-                    <div class="form-group">
+                <form class="form-login" action="{{URL::route('process-login')}}" method="post">
+                    {{csrf_field()}}
+                    <p class="text-center text-danger"><strong>@if($errors->any())
+                                {{$errors->first()}}@endif</strong></p>
+                    <div class="form-group {{($errors->has('email'))?'has-error':''}}">
                         <label>Username</label>
-                        <input type="text" placeholder="Username" class="form-control input-sm bounceIn animation-delay2" >
+                        <input type="text" placeholder="Email" name="email" value="{{old('email')}}" class="form-control input-sm bounceIn animation-delay2" >
+                        <p class="text-danger">{{$errors->first('email')}}</p>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group {{($errors->has('password'))?'has-error':''}}">
                         <label>Password</label>
-                        <input type="password" placeholder="Password" class="form-control input-sm bounceIn animation-delay4">
+                        <input type="password" name="password" placeholder="Password" class="form-control input-sm bounceIn animation-delay4">
+                        <p class="text-danger">{{$errors->first('password')}}</p>
                     </div>
                     <div class="form-group">
                         <label class="label-checkbox inline">
@@ -54,16 +57,8 @@
                         </label>
                         Remember me
                     </div>
-
-                    <div class="seperator"></div>
-                    <div class="form-group">
-                        Forgot your password?<br/>
-                        Click <a href="#">here</a> to reset your password
-                    </div>
-
                     <hr/>
-
-                    <a class="btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right" href="index.html"><i class="fa fa-sign-in"></i> Sign in</a>
+                    <button type="submit" class="btn btn-success btn-sm bounceIn animation-delay5 pull-right">Login</button>
                 </form>
             </div>
         </div><!-- /panel -->
