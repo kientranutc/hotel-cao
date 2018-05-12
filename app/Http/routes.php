@@ -28,9 +28,7 @@ Route::group(['middleware' => 'localization'], function() {
     Route::get('/', function () {
         return view('frontend.home');
     });
-    Route::get('/admin', function () {
-        return view('backend.layouts.master');
-    });
+
     Route::get('/login', function () {
         return view('backend.login');
     });
@@ -41,6 +39,43 @@ Route::post('/login',[
 ]);
 
 //---------------------------------Backend---------------------------------
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['middleware' => ['checkLogin']], function() {
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('',[
+           'as' => 'dashboard',
+           'uses' => 'Backend\DashboardController@index'
+        ]);
+        Route::group(['prefix' => 'banner'], function () {
+            Route::get('', [
+                'as' => 'banner-index',
+                'uses' => 'Backend\BannerController@index'
+            ]);
+            Route::get('/create', [
+                'as' => 'banner-create',
+                'uses' => 'Backend\BannerController@create'
+            ]);
+            Route::post('/create', [
+                'as' => 'banner-create',
+                'uses' => 'Backend\BannerController@processCreate'
+            ]);
+            Route::get('/edit/{id}', [
+                'as' => 'banner-edit',
+                'uses' => 'Backend\BannerController@edit'
+            ]);
+            Route::post('/edit/{id}', [
+                'as' => 'banner-edit',
+                'uses' => 'Backend\BannerController@processEdit'
+            ]);
+            Route::get('/delete/{id}', [
+                'as' => 'banner-delete',
+                'uses' => 'Backend\BannerController@delete'
+            ]);
+        });
 
+        Route::get('logout', [
+            'as' => 'process-logout',
+            'uses' => 'Backend\AuthController@logout'
+        ]);
+
+    });
 });

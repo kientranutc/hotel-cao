@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Endless Admin</title>
+    <title>Cao hospitality| @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -15,16 +15,23 @@
 
     <!-- Pace -->
     <link href="{{asset('backend/css/pace.css')}}" rel="stylesheet">
-
+    <link href="{{asset('backend/css/jquery.dataTables_themeroller.css')}}" rel="stylesheet">
     <!-- Color box -->
     <link href="{{asset('backend/css/colorbox/colorbox.css')}}" rel="stylesheet">
 
     <!-- Morris -->
-    <link href="{{asset('backend/css/morris.css" rel="stylesheet')}}"/>
+
 
     <!-- Endless -->
     <link href="{{asset('backend/css/endless.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/endless-skin.css')}}" rel="stylesheet">
+    <style>
+        a.close {
+            margin-right: 20px;
+        }
+    </style>
+    @yield('link')
+
 
 </head>
 
@@ -261,7 +268,7 @@
                     <li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
                     <li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
                     <li class="divider"></li>
-                    <li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
+                    <li><a tabindex="-1" class="main-link " href="{{URL::route('process-logout')}}"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
                 </ul>
             </li>
         </ul>
@@ -272,79 +279,14 @@
     <div id="main-container">
         <div id="breadcrumb">
             <ul class="breadcrumb">
-                <li><i class="fa fa-home"></i><a href="index.html"> Home</a></li>
-                <li class="active">Dashboard</li>
+                <li><i class="fa fa-home"></i><a href="/admin"> Home</a></li>
+                <li class="active">@yield('breadcrumb')</li>
             </ul>
         </div><!-- /breadcrumb-->
-        <div class="main-header clearfix">
-            <div class="page-title">
-                <h3 class="no-margin">Dashboard</h3>
-                <span>Welcome back Mr.John Doe</span>
-            </div><!-- /page-title -->
 
-            <ul class="page-stats">
-                <li>
-                    <div class="value">
-                        <span>New visits</span>
-                        <h4 id="currentVisitor">4256</h4>
-                    </div>
-                    <span id="visits" class="sparkline"></span>
-                </li>
-                <li>
-                    <div class="value">
-                        <span>My balance</span>
-                        <h4>$<strong id="currentBalance">32153</strong></h4>
-                    </div>
-                    <span id="balances" class="sparkline"></span>
-                </li>
-            </ul><!-- /page-stats -->
-        </div><!-- /main-header -->
-
-        <div class="grey-container shortcut-wrapper">
-            <a href="#" class="shortcut-link">
-					<span class="shortcut-icon">
-						<i class="fa fa-bar-chart-o"></i>
-					</span>
-                <span class="text">Statistic</span>
-            </a>
-            <a href="#" class="shortcut-link">
-					<span class="shortcut-icon">
-						<i class="fa fa-envelope-o"></i>
-						<span class="shortcut-alert">
-							5
-						</span>
-					</span>
-                <span class="text">Messages</span>
-            </a>
-            <a href="#" class="shortcut-link">
-					<span class="shortcut-icon">
-						<i class="fa fa-user"></i>
-					</span>
-                <span class="text">New Users</span>
-            </a>
-            <a href="#" class="shortcut-link">
-					<span class="shortcut-icon">
-						<i class="fa fa-globe"></i>
-						<span class="shortcut-alert">
-							7
-						</span>
-					</span>
-                <span class="text">Notification</span>
-            </a>
-            <a href="#" class="shortcut-link">
-					<span class="shortcut-icon">
-						<i class="fa fa-list"></i>
-					</span>
-                <span class="text">Activity</span>
-            </a>
-            <a href="#" class="shortcut-link">
-					<span class="shortcut-icon">
-						<i class="fa fa-cog"></i></span>
-                <span class="text">Setting</span>
-            </a>
-        </div><!-- /grey-container -->
 
         <div class="padding-md">
+            @include('backend.partials.message')
             @yield('content')
         </div><!-- /.padding-md -->
     </div><!-- /main-container -->
@@ -387,21 +329,47 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+    <div id="deleteModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="text-center">Do you want to item?</h4>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="" id="btn-modal-delete"class="btn btn-success">Delete</a>
+                    <a href="javscript:void(0)" class="btn btn-danger" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="imageModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe  width="100%" height="550" frameborder="0" src="{{url('/')}}/filemanager/dialog.php?type=&field_id=image-input">
+                    </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div><!-- /wrapper -->
 
 <a href="" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
 
 <!-- Logout confirmation -->
-<div class="custom-popup width-100" id="logoutConfirm">
-    <div class="padding-md">
-        <h4 class="m-top-none"> Do you want to logout?</h4>
-    </div>
-
-    <div class="text-center">
-        <a class="btn btn-success m-right-sm" href="login.html">Logout</a>
-        <a class="btn btn-danger logoutConfirm_close">Cancel</a>
-    </div>
-</div>
 
 <!-- Le javascript
 ================================================== -->
@@ -409,17 +377,13 @@
 
 <!-- Jquery -->
 <script src="{{asset('backend/js/jquery-1.10.2.min.js')}}"></script>
+<script src="{{asset('backend/tinymce/js/tinymce/tinymce.min.js')}}"></script>
 
 <!-- Bootstrap -->
 <script src="{{asset('backend/bootstrap/js/bootstrap.js')}}"></script>
 
-<!-- Flot -->
-<script src="{{asset('backend/js/jquery.flot.min.js')}}"></script>
-
-<!-- Morris -->
 <script src="{{asset('backend/js/rapheal.min.js')}}"></script>
-<script src="{{asset('backend/js/morris.min.js')}}"></script>
-
+<script src="{{asset('backend/js/jquery.dataTables.min.js')}}"></script>
 <!-- Colorbox -->
 <script src="{{asset('backend/js/jquery.colorbox.min.js')}}"></script>
 
@@ -443,6 +407,8 @@
 
 <!-- Endless -->
 <script src="{{asset('backend/js/endless/endless.js')}}"></script>
-
+<script src="{{asset('backend/show_modal_delete.js')}}"></script>
+<script src="{{asset('backend/input_add_image.js')}}"></script>
+@yield('script')
 </body>
 </html>

@@ -20,14 +20,7 @@
                 </ul>
             </div>
         </div><!-- /user-block -->
-        <div class="search-block">
-            <div class="input-group">
-                <input type="text" class="form-control input-sm" placeholder="search here...">
-                <span class="input-group-btn">
-							<button class="btn btn-default btn-sm" type="button"><i class="fa fa-search"></i></button>
-						</span>
-            </div><!-- /input-group -->
-        </div><!-- /search-block -->
+
         <div class="main-menu">
             <ul>
                 <li class="active">
@@ -41,13 +34,24 @@
                         <span class="menu-hover"></span>
                     </a>
                 </li>
+                <li class="active">
+                    <a href="{{URL::route('banner-index')}}">
+								<span class="menu-icon">
+									<i class="fa fa-desktop fa-lg"></i>
+								</span>
+                        <span class="text">
+									Banner
+								</span>
+                        <span class="menu-hover"></span>
+                    </a>
+                </li>
                 <li class="openable open">
-                    <a href="#">
+                    <a href="">
 								<span class="menu-icon">
 									<i class="fa fa-file-text fa-lg"></i>
 								</span>
                         <span class="text">
-									Page
+									Banner
 								</span>
                         <span class="menu-hover"></span>
                     </a>
@@ -196,9 +200,6 @@
                 </li>
             </ul>
 
-            <div class="alert alert-info">
-                Welcome to Endless Admin. Do not forget to check all my pages.
-            </div>
         </div><!-- /main-menu -->
     </div><!-- /sidebar-inner -->
 </aside>

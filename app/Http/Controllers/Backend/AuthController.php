@@ -18,7 +18,11 @@ class AuthController extends Controller
         } else {
             return redirect()->back()->withErrors("Mật khẩu hoặc email không đúng")->withInput($request->all());
         }
+    }
 
-
+    public function  logout()
+    {
+        \Auth::logout();
+        return redirect('login');
     }
 }

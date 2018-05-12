@@ -215,12 +215,10 @@
                     <div class="carousel-inner">
                         <div class="item active"><img src="{{asset('frontend/images/photos/8.jpg')}}" class="img-responsive" alt="slide">
                         </div>
-                        <div class="item  height-full"><img src="{{asset('frontend/images/photos/9.jpg')}}"  class="img-responsive" alt="slide"></div>
-                        <div class="item  height-full"><img src="{{asset('frontend/images/photos/10.jpg')}}"  class="img-responsive" alt="slide"></div>
+
                     </div>
                     <!-- Controls -->
-                    <a class="left carousel-control" href="#RoomCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                    <a class="right carousel-control" href="#RoomCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
                 </div>
                 <!-- RoomCarousel-->
                 <div class="caption">Rooms<a href="" class="pull-right">Read more</a></div>
