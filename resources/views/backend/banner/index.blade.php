@@ -11,7 +11,7 @@
         </div><!-- /page-title -->
         <div class="panel panel-default table-responsive">
             <div class="panel-heading">
-                <h4 class="text-danger">Blog</h4>
+                <h4 class="text-danger">Banner</h4>
             </div>
             <div class="padding-md clearfix">
                 <div class="table-responsive">

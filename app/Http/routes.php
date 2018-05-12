@@ -41,10 +41,23 @@ Route::post('/login',[
 //---------------------------------Backend---------------------------------
 Route::group(['middleware' => ['checkLogin']], function() {
     Route::group(['prefix' => 'admin'], function () {
+        //dashboard
         Route::get('',[
            'as' => 'dashboard',
            'uses' => 'Backend\DashboardController@index'
         ]);
+        //user
+        Route::group(['prefix' => 'user'], function () {
+            Route::get('', [
+                'as' => 'user-index',
+                'uses' => 'Backend\UserController@index'
+            ]);
+            Route::get('/create',[
+               'as' => 'user-create',
+               'uses' => 'Backend\UserController@create'
+            ]);
+        });
+        //banner
         Route::group(['prefix' => 'banner'], function () {
             Route::get('', [
                 'as' => 'banner-index',
