@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 class UserSeedTable extends Seeder
 {
     /**
@@ -11,7 +10,6 @@ class UserSeedTable extends Seeder
      */
     public function run()
     {
-
         DB::table('users')->truncate();
         DB::table('users')->insert([
             'username' => 'kientran',

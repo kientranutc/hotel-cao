@@ -4,7 +4,7 @@
 <div class="projects">
     <div class="projects-title">
         <div class="container">
-            <h3 class="text-center">Projects</h3>
+            <h3 class="text-center">@lang('category.title.project')</h3>
         </div>
     </div>
     <div class="projects-content">
@@ -63,7 +63,7 @@
     </div>
     <div class="load-more">
         <div class="container">
-            <p><a href=""><i class="fa fa-angle-double-right fa-sm animated fadeInLeft" aria-hidden="true"></i> Load more</a></p>
+            <p><a href=""><i class="fa fa-angle-double-right fa-sm animated fadeInLeft" aria-hidden="true"></i> @lang('category.load_more')</a></p>
         </div>
     </div>
 </div>
@@ -153,35 +153,35 @@
 <section id="section-why-value">
     <div class="why-value-title">
         <div class="container">
-            <h3 class="text-center">core value and why choose us</h3>
+            <h3 class="text-center">@lang('category.title.core_value')</h3>
         </div>
     </div>
     <div class="why-us-value">
        <div class="container">
            <div class="row">
                <div class="col-md-4 col-md-offset-1 item">
-                   <h4>core value</h4>
+                   <h4>@lang('category.core_value.title')</h4>
                    <div class="why-us-value-content">
                        <ul>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Nhân sự</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Đam mê</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Am hiểu</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Chất lượng</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Trách nhiệm</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Chia sẻ</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.core_value.content.1')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.core_value.content.2')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.core_value.content.3')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.core_value.content.4')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.core_value.content.5')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.core_value.content.6')</li>
                        </ul>
                    </div>
                </div>
                <div class="col-md-4 col-md-offset-2 item">
-                    <h4>Why choose us</h4>
+                    <h4>@lang('category.why_us.title')</h4>
                    <div class="why-us-value-content">
                        <ul>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Kế hoạch, định hướng theo từng giai đoạn</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Làm việc nhóm hiệu quả</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Công nghệ</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Theo sát tiến trình</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Nhân sự chất lượng cao</li>
-                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> Hợp tác hai bên cùng có lợi</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.why_us.content.1')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.why_us.content.2')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.why_us.content.3')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.why_us.content.4')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.why_us.content.5')</li>
+                           <li><i class="fa fa-check fa-lg" aria-hidden="true"></i> @lang('category.why_us.content.6')</li>
                        </ul>
                    </div>
                </div>
@@ -189,12 +189,7 @@
            <div class="row">
                <div class="col-sm-12">
                    <div class="why-us-value-text">
-                       <p>Là một công ty khai thác và phát triển kinh doanh trong nhiều lĩnh vực,
-                           chúng tôi nhận thức rằng, để phát triển thì nguồn nhân lực là yếu tố then chốt.
-                           Cùng với sự tận tâm và niềm đam mê nhiệt huyết, sự am hiểu thị trường,
-                           nắm bắt chính xác thông tin chắc chắn sẽ đem lại những thành quả vượt ngoài sự mong đợi.
-                           Hơn thế nữa, chúng tôi hân hoan và trân trọng chia sẻ tất cả các giá trị,
-                           lợi ích với đối tác để cùng nhau phát triển bền vững
+                       <p>@lang('category.core_why_content')
                        </p>
                    </div>
                </div>
@@ -206,7 +201,7 @@
 <div class="news">
     <div class="news-title">
         <div class="container">
-            <h3 class="text-center">News</h3>
+            <h3 class="text-center">@lang('category.title.news')</h3>
         </div>
     </div>
 </div>

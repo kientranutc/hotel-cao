@@ -5,44 +5,44 @@
 <footer class="spacer">
     <div class="container">
         <div class="footer-title">
-            <h2>Contact us</h2>
+            <h2>@lang('footer.title')</h2>
         </div>
         <div class="row">
 
             <div class="col-sm-4">
                 <ul class="list-unstyled">
                     <li>
-                        <h3><i class="fa fa-map-marker" aria-hidden="true"></i> <b>Trụ sở chính</b>
+                        <h3><i class="fa fa-map-marker" aria-hidden="true"></i> <b>@lang('footer.head_office.title')</b>
                         </h3>
                         <div style="margin-left: 20px">
-                            <p> <b>Tên công ty:</b> Công ty CP quản lý khách sạn Cao</p>
-                            <p> <b>Địa chỉ:</b> 27 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội</p>
-                            <p> <b>MST:</b> 0108189456</p>
+                            <p> <b>@lang('footer.head_office.company_name.title'):</b> @lang('footer.head_office.company_name.name')</p>
+                            <p> <b>@lang('footer.head_office.address.title'):</b> @lang('footer.head_office.address.name')</p>
+                            <p> <b>@lang('footer.head_office.tax_number.title'):</b> @lang('footer.head_office.tax_number.name')</p>
 
                         </div>
                     </li>
                     <li>
                         <h3><i class="fa fa-envelope" aria-hidden="true"></i> Email / Website</h3>
                         <div style="margin-left: 20px">
-                            <p><b>Email:</b> caohospitality@gmail.com
+                            <p><b>Email:</b> @lang('footer.email_website.email')
                             </p>
                         </div>
                     </li>
                     <li>
-                        <h3><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> <b>Liên hệ
+                        <h3><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> <b>@lang('footer.contact.title')
                             </b></h3>
                         <div style="margin-left: 20px">
-                            <p><b>Điện thoại: </b><a href="">090.415.4029</a>
+                            <p><b>@lang('footer.contact.phone.title'): </b><a href="">@lang('footer.contact.phone.name')</a>
                             </p>
                         </div>
                     </li>
                     <li>
-                        <h3><i class="fa fa-university" aria-hidden="true"></i> <b>Thông tin tài khoản</b>
+                        <h3><i class="fa fa-university" aria-hidden="true"></i> <b>@lang('footer.bank_account.title')</b>
                         </h3>
                         <div style="margin-left: 20px">
-                            <p><b>Tên người thụ hưởng:</b> Công ty cổ phần quản lý khách sạn Cao</p>
-                            <p><b>Số tài khoản:</b> 147888686</p>
-                            <p><b>Tại:</b> Ngân hàng VB bank – chi nhánh Ngô Quyền</p>
+                            <p><b>@lang('footer.bank_account.name.title'):</b> @lang('footer.bank_account.name.name')</p>
+                            <p><b>@lang('footer.bank_account.account_number.title'):</b> @lang('footer.bank_account.account_number.name')</p>
+                            <p><b>@lang('footer.bank_account.bank.title'):</b> @lang('footer.bank_account.bank.name')</p>
                         </div>
                     </li>
 
@@ -52,7 +52,7 @@
                 <form action="">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="form-control"  placeholder="Name*" required>
+                            <input type="text" class="form-control"  placeholder="@lang('footer.form.name')*" required>
                         </div>
                         <div class="col-md-6">
                             <input type="text" class="form-control" placeholder="Email*" required>
@@ -60,12 +60,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" class="form-control" placeholder="@lang('footer.form.subject')">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="text-center"><button type="submit" class="form-control contact-submit">Send</button></p>
+                            <p class="text-center"><button type="submit" class="form-control contact-submit">@lang('footer.form.send')</button></p>
                         </div>
                     </div>
                 </form>
