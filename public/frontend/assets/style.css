@@ -236,7 +236,7 @@ div.selector option{ padding: 10px;}
 
 
 .gallery .gallery-image{margin-bottom: 2em;display: inline-block;}
-.gallery .gallery-image img{width: 100%;}
+.gallery .gallery-image img{width: 100%;height: 270px;}
 
 body::-webkit-scrollbar {
         width: 6px;
@@ -306,4 +306,7 @@ body::-webkit-scrollbar {
     background: #1F3952;
     color: #ffffff;
     border-radius: 5px;
+}
+.contact-title {
+    color: #73726C;
 }

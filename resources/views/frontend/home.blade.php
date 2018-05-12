@@ -12,7 +12,7 @@
             <div class="row gallery">
                 <div class="col-sm-4 wowload fadeInUp">
                     <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan.jpg')}}" class="img-responsive">
+                        <img src="{{asset('frontend/assets/img/duan_daewoo.jpg')}}" class="img-responsive">
                         <div class="info-project">
                             <p>Dự án x</p>
                         </div>
@@ -150,6 +150,7 @@
     {{--</div>--}}
 {{--</section>--}}
     {{--why choose us--}}
+
 <section id="section-why-value">
     <div class="why-value-title">
         <div class="container">

@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
 
-        <h1 class="title">Contact</h1>
+        <h1 class="title contact-title">@lang('footer.title')</h1>
 
 
         <!-- form -->
@@ -14,8 +14,7 @@
 
                 <div class="col-sm-12">
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9933.460884430251!2d-0.13301252240929382!3d51.50651527467666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2snp!4v1414314152341" width="100%" height="300" frameborder="0"></iframe>
-                    </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.2633252280416!2d105.85175141438664!3d21.022147186002037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abece78b8b5b%3A0x87357580055c35c9!2zMjcgTMO9IFRoxrDhu51uZyBLaeG7h3QsIEjDoG5nIELDoGksIEhvw6BuIEtp4bq_bSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1526093494061" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                    </div>
 
 
                     <div class="col-sm-6 col-sm-offset-3">

@@ -21,9 +21,10 @@ Route::group(['middleware' => 'localization'], function() {
         'as' => 'switchLang',
         'uses' => 'Frontend\LanguageController@postLang',
     ]);
-    Route::get('/contact', function () {
-        return view('frontend.about');
-    });
+    Route::get('/contact',[
+        'as' => 'contact',
+        'uses' => 'Frontend\ContactController@index'
+    ]);
     Route::get('/', function () {
         return view('frontend.home');
     });

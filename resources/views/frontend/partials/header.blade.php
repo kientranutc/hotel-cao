@@ -7,7 +7,7 @@
     <meta name="keywords" content="từ khóa" />
     <meta name="robots" content="noodp,index,follow" />
     <meta name='revisit-after' content='1 days' />
-    <title>CAO-Hospitality</title>
+    <title>CAO-Hospitality @yield('title')</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -69,7 +69,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="/">
           <span class="logo-content">
               <img src="{{asset('frontend/assets/img/logo_1.jpg')}}"  alt="{{asset('frontend/assets/img/logo_1.jpg')}}">
           </span>
@@ -80,12 +80,12 @@
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav">
-                <li><a class="animated fadeInDown" href="index.php">@lang('home.menu.home')</a></li>
-                <li><a class="animated fadeInDown" href="#section-why-us">@lang('home.menu.why_choose_us')</a></li>
+                <li><a class="animated fadeInDown" href="/">@lang('home.menu.home')</a></li>
+                <li><a class="animated fadeInDown" href="#section-why-value">@lang('home.menu.why_choose_us')</a></li>
                 <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.team')</a></li>
                 <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.service')</a></li>
                 <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.news')</a></li>
-                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.contact')</a></li>
+                <li><a class="animated fadeInDown" href="{{URL::route('contact')}}">@lang('home.menu.contact')</a></li>
                 <li><div class="language">
                         <a href="{{URL::route('switchLang','en')}}"><img src="{{asset('frontend/assets/img/English.png')}}" alt=""></a>
                         <a href="{{URL::route('switchLang','vi')}}"><img src="{{asset('frontend/assets/img/vietnamese.png')}}" alt=""></a>
