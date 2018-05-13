@@ -34,13 +34,24 @@
                         <span class="menu-hover"></span>
                     </a>
                 </li>
-                <li class="active">
+                <li class="{{(Route::currentRouteName()=='banner-index')?'active':''}}">
                     <a href="{{URL::route('banner-index')}}">
 								<span class="menu-icon">
 									<i class="fa fa-desktop fa-lg"></i>
 								</span>
                         <span class="text">
 									Banner
+								</span>
+                        <span class="menu-hover"></span>
+                    </a>
+                </li>
+                <li class="{{(Route::currentRouteName()=='project-index')?'active':''}}">
+                    <a href="{{URL::route('project-index')}}">
+								<span class="menu-icon">
+									<i class="fa fa-desktop fa-lg"></i>
+								</span>
+                        <span class="text">
+									Project
 								</span>
                         <span class="menu-hover"></span>
                     </a>

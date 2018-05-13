@@ -84,7 +84,38 @@ Route::group(['middleware' => ['checkLogin']], function() {
                 'uses' => 'Backend\BannerController@delete'
             ]);
         });
-
+        //project
+        Route::group(['prefix' => 'project'], function () {
+            Route::get('', [
+                'as' => 'project-index',
+                'uses' => 'Backend\ProjectController@index'
+            ]);
+            Route::get('/create', [
+                'as' => 'project-create',
+                'uses' => 'Backend\ProjectController@create'
+            ]);
+            Route::post('/create', [
+                'as' => 'project-create',
+                'uses' => 'Backend\ProjectController@processCreate'
+            ]);
+            Route::get('/edit/{id}', [
+                'as' => 'project-edit',
+                'uses' => 'Backend\ProjectController@edit'
+            ]);
+            Route::post('/edit/{id}', [
+                'as' => 'project-edit',
+                'uses' => 'Backend\ProjectController@processEdit'
+            ]);
+            Route::get('/show-content/{id}', [
+                'as' => 'project-show-content',
+                'uses' => 'Backend\ProjectController@showContent'
+            ]);
+            Route::get('/delete/{id}', [
+                'as' => 'project-delete',
+                'uses' => 'Backend\ProjectController@delete'
+            ]);
+        });
+        //logout
         Route::get('logout', [
             'as' => 'process-logout',
             'uses' => 'Backend\AuthController@logout'
