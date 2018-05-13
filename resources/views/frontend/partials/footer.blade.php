@@ -50,12 +50,13 @@
             </div>
             <div class="col-sm-8 subscribe">
                 <form action="">
+                    {{csrf_field()}}
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" class="form-control"  placeholder="@lang('footer.form.name')*" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Email*" required>
+                            <input type="email" class="form-control" placeholder="Email*" required>
                         </div>
                     </div>
                     <div class="row">
