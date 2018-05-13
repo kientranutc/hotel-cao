@@ -28,10 +28,9 @@ Route::group(['middleware' => 'localization'], function() {
     Route::get('/', function () {
         return view('frontend.home');
     });
-
-    Route::get('/login', function () {
-        return view('backend.login');
-    });
+});
+Route::get('/login', function () {
+    return view('backend.login');
 });
 Route::post('/login',[
     'as' => 'process-login',
@@ -56,6 +55,15 @@ Route::group(['middleware' => ['checkLogin']], function() {
                'as' => 'user-create',
                'uses' => 'Backend\UserController@create'
             ]);
+            Route::post('/create',[
+                'as' => 'user-create',
+                'uses' => 'Backend\UserController@processCreate'
+            ]);
+            Route::get('/delete/{id}', [
+                'as' => 'user-delete',
+                'uses' => 'Backend\UserController@delete'
+            ]);
+
         });
         //banner
         Route::group(['prefix' => 'banner'], function () {
@@ -113,6 +121,36 @@ Route::group(['middleware' => ['checkLogin']], function() {
             Route::get('/delete/{id}', [
                 'as' => 'project-delete',
                 'uses' => 'Backend\ProjectController@delete'
+            ]);
+        });
+        Route::group(['prefix' => 'news'], function () {
+            Route::get('', [
+                'as' => 'news-index',
+                'uses' => 'Backend\NewsController@index'
+            ]);
+            Route::get('/create', [
+                'as' => 'news-create',
+                'uses' => 'Backend\NewsController@create'
+            ]);
+            Route::post('/create', [
+                'as' => 'news-create',
+                'uses' => 'Backend\NewsController@processCreate'
+            ]);
+            Route::get('/edit/{id}', [
+                'as' => 'news-edit',
+                'uses' => 'Backend\NewsController@edit'
+            ]);
+            Route::post('/edit/{id}', [
+                'as' => 'news-edit',
+                'uses' => 'Backend\NewsController@processEdit'
+            ]);
+            Route::get('/show-content/{id}', [
+                'as' => 'news-show-content',
+                'uses' => 'Backend\NewsController@showContent'
+            ]);
+            Route::get('/delete/{id}', [
+                'as' => 'news-delete',
+                'uses' => 'Backend\NewsController@delete'
             ]);
         });
         //logout

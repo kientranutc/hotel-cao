@@ -14,11 +14,11 @@
 @section('content')
     <div class="panel panel-default table-responsive">
         <div class="panel-heading clearfix">
-            <a href="{{URL::route('banner-index')}}" class="btn btn-success">Back to</a>
+            <a href="{{URL::route('user-index')}}" class="btn btn-success">Back to</a>
         </div><!-- /page-title -->
         <div class="panel-heading"><h4 class="text-danger">Add New User</h4> </div>
         <div class="panel-body">
-            <form class="no-margin" id="formValidate2" action="{{URL::route('banner-create')}}" method="post" data-validate="parsley" novalidate>
+            <form class="no-margin" id="formValidate2" action="{{URL::route('user-create')}}" method="post" data-validate="parsley" novalidate>
                 {{csrf_field()}}
                 <div class="panel-body">
                     <div class="row">
@@ -43,7 +43,7 @@
                         <div class="col-md-6 {{($errors->has('email'))?'has-error':''}}">
                             <div class="form-group">
                                 <label class="control-label">Email</label>
-                                <input type="text" placeholder="link" value="{{old('email')?old('email'):''}}"  name="email" class="form-control input-sm" data-required="true" data-type="url">
+                                <input type="text" placeholder="Email" value="{{old('email')?old('email'):''}}"  name="email" class="form-control input-sm" data-required="true" data-type="url">
                             </div>
                         </div>
                         <div class="col-md-6 {{($errors->has('image'))?'has-error':''}}">
@@ -62,14 +62,14 @@
                         <div class="col-md-6 {{($errors->has('password'))?'has-error':''}}">
                             <div class="form-group ">
                                 <label class="control-label">Password</label>
-                                <input type="text" placeholder="Password" value=""  name="password" class="form-control input-sm" data-required="true">
+                                <input type="password" placeholder="Password" value=""  name="password" class="form-control input-sm" data-required="true">
                                 <p class="text-danger"> {{$errors->first('password')}}</p>
                             </div>
                         </div><!-- /.col -->
                         <div class="col-md-6 {{($errors->has('title_vi'))?'has-error':''}}">
                             <div class="form-group ">
                                 <label class="control-label">Confirm Password</label>
-                                <input type="text" placeholder="Confirm Password" value=""  name="c_password" class="form-control input-sm" data-required="true">
+                                <input type="password" placeholder="Confirm Password" value=""  name="c_password" class="form-control input-sm" data-required="true">
                                 <p class="text-danger"> {{$errors->first('c_password')}}</p>
                             </div>
                         </div>

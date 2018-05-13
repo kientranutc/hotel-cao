@@ -68,8 +68,8 @@
 <div id="wrapper" class="preload">
     <div id="top-nav" class="fixed skin-6">
         <a href="#" class="brand">
-            <span>Endless</span>
-            <span class="text-toggle"> Admin</span>
+            <span>Cao</span>
+            <span class="text-toggle">hospitality</span>
         </a><!-- /brand -->
         <button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
             <span class="icon-bar"></span>
@@ -251,22 +251,20 @@
             </li>
             <li class="profile dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <strong>John Doe</strong>
+                    <strong>{{Auth::user()->fullname}}</strong>
                     <span><i class="fa fa-chevron-down"></i></span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
                         <a class="clearfix" href="#">
-                            <img src="img/user.jpg" alt="User Avatar">
+                            <img src="{{(Auth::user()->image!="")?Auth::user()->image:asset('frontend/assets/img/user-icon.png')}}" alt="User Avatar">
                             <div class="detail">
-                                <strong>John Doe</strong>
-                                <p class="grey">John_Doe@email.com</p>
+                                <strong>{{Auth::user()->fullname}}</strong>
+
                             </div>
                         </a>
                     </li>
                     <li><a tabindex="-1" href="profile.html" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
-                    <li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
-                    <li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
                     <li class="divider"></li>
                     <li><a tabindex="-1" class="main-link " href="{{URL::route('process-logout')}}"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
                 </ul>
@@ -372,7 +370,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4>CONTENT OUR PROJECT</h4>
+                    <h4>DISPLAY CONTENT</h4>
                 </div>
                 <div class="modal-body" id="content-modal-body">
 

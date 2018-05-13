@@ -14,7 +14,7 @@ class AuthController extends Controller
         $email = $request->email;
         $password = $request->password;
         if (\Auth::attempt(['email' => $email, 'password' => $password],true)) {
-          return  view('backend.dashboard');
+          return  redirect()->route('dashboard');
         } else {
             return redirect()->back()->withErrors("Mật khẩu hoặc email không đúng")->withInput($request->all());
         }

@@ -1,19 +1,17 @@
 
 @extends('backend.layouts.master')
-@section('title', 'User')
+@section('title', 'Project')
 @section('breadcrumb')
-    user
+    News
 @stop
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading clearfix">
-            @if (Auth::user()->is_admin==1)
-                <a href="{{URL::route('user-create')}}" class="btn btn-success">Add New</a>
-            @endif
+                <a href="{{URL::route('news-create')}}" class="btn btn-success">Add New</a>
         </div><!-- /page-title -->
         <div class="panel panel-default table-responsive">
             <div class="panel-heading">
-                <h4 class="text-danger">User</h4>
+                <h4 class="text-danger">News</h4>
             </div>
             <div class="padding-md clearfix">
                 <div class="table-responsive">
@@ -21,36 +19,38 @@
                         <thead>
                         <tr>
                             <th width="5%" class="text-center">ID</th>
-                            <th width="15%" class="text-center">UserName</th>
-                            <th width="15%" class="text-center">Fullname</th>
+                            <th width="10%" class="text-center">Title English</th>
+                            <th width="10%" class="text-center">Title Vietnamese</th>
                             <th width="10%" class="text-center">Image</th>
-                            <th width="10%" class="text-center">Email</th>
-                            <th width="10%" class="text-center">Role</th>
+                            <th width="10%" class="text-center">Active</th>
+                            <th width="10%" class="text-center">Content Englis & Vietnamese</th>
                             <th width="10%" class="text-center">Create date</th>
+                            <th width="10%" class="text-center">User create</th>
                             <th width="10%" class="text-center"></th>
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse ($dataUser  as $item)
+                        @forelse ($dataNews  as $item)
                             <tr>
                                 <td class="text-center">{{++$stt}}</td>
-                                <td class="text-center">{{$item->username}}</td>
-                                <td class="text-center">{{$item->fullname}}</td>
+                                <td class="text-center">{{$item->title_en}}</td>
+                                <td class="text-center">{{$item->title_vi}}</td>
                                 <td class="text-center"><img src="{{$item->image}}" alt="{{$item->image}}"></td>
-                                <td class="text-center">{{$item->email}}</td>
                                 <td class="text-center">
-                                    @if($item->is_admin==1)
-                                        <span class="btn btn-success btn-sm">Admin</span>
+                                    @if($item->active==1)
+                                        <span class="btn btn-success btn-sm">Active</span>
                                     @else
-                                        <span class="btn btn-danger btn-sm">Member</span>
+                                        <span class="btn btn-danger btn-sm">InActive</span>
                                     @endif
                                 </td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)" data-description="{{$item->id}}"  data-toggle="tooltip" title="Content English& Vietnamese" class="btn btn-success show-content"><i class="fa fa-caret-square-o-down" aria-hidden="true"></i></a>
+                                </td>
+                                <td class="text-center">{{$item->user_create}}</td>
                                 <td class="text-center">{{$item->created_at}}</td>
                                 <td class="text-center">
-                                    <a href="{{URL::route('banner-edit', $item->id)}}" data-toggle="tooltip" title="Edit" class="btn btn-success"><i class="fa fa-edit fa-lg"></i></a>
-                                    @if ($item->is_admin !=1)
-                                        <a href="{{URL::route('user-delete',$item->id)}}" data-toggle="tooltip" title="Delete" data-toggle="modal"  class="btn btn-danger delete-view"><i class="fa fa-trash-o fa-lg"></i></a>
-                                    @endif
+                                    <a href="{{URL::route('news-edit', $item->id)}}" data-toggle="tooltip" title="Edit" class="btn btn-success"><i class="fa fa-edit fa-lg"></i></a>
+                                    <a href="{{URL::route('news-delete',$item->id)}}" data-toggle="tooltip" title="Delete" data-toggle="modal"  class="btn btn-danger delete-view"><i class="fa fa-trash-o fa-lg"></i></a>
                                 </td>
                             </tr>
                         @empty
@@ -66,6 +66,15 @@
 @stop
 @section('script')
     <script>
+        var host = window.location.href;
+        host = host.split('/');
+        var url = host[0] + "//" + host[2] + "/";
+        $(document).on('click', '.show-content', function(event){
+           event.preventDefault();
+           var id = $(this).data('description');
+            $('#contentModal').modal().find('#content-modal-body').load(url+"admin/news/show-content/"+id+" #content-project");
+        });
+
         $(function() {
             $('#dataTable').dataTable({
                 "bJQueryUI": true,
@@ -85,7 +94,7 @@
                 //     'sSearchPlaceholder':'Tìm kiếm'
                 // },
                 "columnDefs": [ {
-                    "targets": 7,
+                    "targets": 8,
                     "orderable": false
                 } ]
             });
