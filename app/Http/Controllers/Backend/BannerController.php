@@ -13,7 +13,7 @@ class BannerController extends Controller
 {
     public function  index()
     {
-        $dataBanner = Banner::all();
+        $dataBanner = Banner::orderBy('created_at', 'DESC')->get();
         $stt=0;
         return view('backend.banner.index', compact('stt', 'dataBanner'));
     }

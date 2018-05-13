@@ -13,7 +13,7 @@ class ProjectController extends Controller
 
     public function  index ()
     {
-        $dataProject = Project::all();
+        $dataProject = Project::orderBy('created_at', 'DESC')->get();
         $stt = 0;
         return view('backend.project.index', compact('stt', 'dataProject'));
     }
