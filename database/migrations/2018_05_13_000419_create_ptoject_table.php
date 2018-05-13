@@ -38,6 +38,6 @@ class CreatePtojectTable extends Migration
      */
     public function down()
     {
-        Schema::drop('project');
+        Schema::drop('projects');
     }
 }
