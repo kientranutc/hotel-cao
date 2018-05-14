@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Support\Helper;
 class DatabaseController extends Controller
 {
 
     public function createTable()
     {
-        \Artisan::call('migrate');
+        $helper = new Helper();
+        $helper::sendEmail('mail.reset',[], 'kienkienutc95@gmail.com', 'test');
+//        \Artisan::call('migrate');
     }
 }

@@ -56,7 +56,7 @@
                             <input type="text" class="form-control"  placeholder="@lang('footer.form.name')*" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Email*" required>
+                            <input type="email" class="form-control" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                         </div>
                     </div>
                     <div class="row">
