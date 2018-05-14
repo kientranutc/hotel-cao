@@ -36,12 +36,13 @@
 
     <link rel="stylesheet" href="{{asset('frontend/assets/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/banner.css')}}">
-    {{--<link rel="stylesheet" href="{{asset('frontend/assets/css/service.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/service.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/why-us.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/our-experts.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/news.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/project.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/why-us-value.css')}}">
+    @yield('link')
     <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
 
 </head>

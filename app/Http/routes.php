@@ -28,6 +28,9 @@ Route::group(['middleware' => 'localization'], function() {
     Route::get('/', function () {
         return view('frontend.home');
     });
+    Route::get('/team', function () {
+        return view('frontend.team');
+    });
 });
 Route::get('/login', function () {
     return view('backend.login');
@@ -36,6 +39,8 @@ Route::post('/login',[
     'as' => 'process-login',
     'uses' => 'Backend\AuthController@processLogin'
 ]);
+
+
 
 //---------------------------------Backend---------------------------------
 Route::group(['middleware' => ['checkLogin']], function() {
