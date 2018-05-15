@@ -41,7 +41,7 @@
                     <p class="text-center text-danger"><strong>@if($errors->any())
                                 {{$errors->first()}}@endif</strong></p>
                     <div class="form-group {{($errors->has('email'))?'has-error':''}}">
-                        <label>Username</label>
+                        <label>Email</label>
                         <input type="text" placeholder="Email" name="email" value="{{old('email')}}" class="form-control input-sm bounceIn animation-delay2" >
                         <p class="text-danger">{{$errors->first('email')}}</p>
                     </div>

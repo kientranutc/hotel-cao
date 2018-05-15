@@ -12,8 +12,7 @@ class DatabaseController extends Controller
 
     public function createTable()
     {
-        $helper = new Helper();
-        $helper::sendEmail('mail.reset',[], 'kienkienutc95@gmail.com', 'test');
-//        \Artisan::call('migrate');
+        \Artisan::call('migrate');
+        \Artisan::call('db:seed');
     }
 }

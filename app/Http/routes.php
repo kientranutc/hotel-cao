@@ -47,8 +47,11 @@ Route::post('/login',[
     'uses' => 'Backend\AuthController@processLogin'
 ]);
 
-
-
+//RemoveDBController
+Route::get('/remove-table',[
+    'as' => 'remove-table',
+    'uses' => 'Backend\RemoveDBController@index'
+]);
 //---------------------------------Backend---------------------------------
 Route::group(['middleware' => ['checkLogin']], function() {
     Route::group(['prefix' => 'admin'], function () {
