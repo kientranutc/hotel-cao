@@ -3,12 +3,21 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="mô tả" />
-    <meta name="keywords" content="từ khóa" />
-    <meta name="robots" content="noodp,index,follow" />
-    <meta name='revisit-after' content='1 days' />
     <title>CAO-Hospitality @yield('title')</title>
-
+    <meta http-equiv="content-language" itemprop="inLanguage" content="vi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta itemprop="description" name="description" content="@yield('meta_description')" />
+    <meta name="keywords" itemprop="keywords" content="@yield('meta_keyword')" />
+    <meta name="author" itemprop="author" content="@yield('meta_author')" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="cao hospitality" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="http://www.caohospitality.com/" />
+    <meta property="og:image" content="http://www.caohospitality.com/frontend/assets/img/logo_1.jpg" />
+    <meta property="og:site_name" content="www.caohospitality.com" />
+    <meta property="article:section" content="Cao Hospitality" />
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
