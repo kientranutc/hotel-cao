@@ -31,6 +31,9 @@ Route::group(['middleware' => 'localization'], function() {
     Route::get('/team', function () {
         return view('frontend.team');
     });
+    Route::get('/service', function () {
+        return view('frontend.service');
+    });
 });
 Route::get('/login', function () {
     return view('backend.login');

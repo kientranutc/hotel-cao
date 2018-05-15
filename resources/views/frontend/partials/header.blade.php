@@ -36,7 +36,6 @@
 
     <link rel="stylesheet" href="{{asset('frontend/assets/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/banner.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/service.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/why-us.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/our-experts.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/news.css')}}">
@@ -82,9 +81,9 @@
 
             <ul class="nav navbar-nav">
                 <li><a class="animated fadeInDown" href="/">@lang('home.menu.home')</a></li>
-                <li><a class="animated fadeInDown" href="#section-why-value">@lang('home.menu.why_choose_us')</a></li>
-                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.team')</a></li>
-                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.service')</a></li>
+                <li><a class="animated fadeInDown" href="{{url('/')}}#section-why-value">@lang('home.menu.why_choose_us')</a></li>
+                <li><a class="animated fadeInDown" href="{{url('/')}}/team">@lang('home.menu.team')</a></li>
+                <li><a class="animated fadeInDown" href="{{url('/')}}/service">@lang('home.menu.service')</a></li>
                 <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.news')</a></li>
                 <li><a class="animated fadeInDown" href="{{URL::route('contact')}}">@lang('home.menu.contact')</a></li>
                 <li><div class="language">

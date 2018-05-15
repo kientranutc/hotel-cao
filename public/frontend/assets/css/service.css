@@ -18,6 +18,8 @@
 .service .service-content .item {
     text-align: center;
     margin-top: 20px;
+    color: #000;
+
 }
 .service .service-content .item img {
     width: calc(100% - 293px);
@@ -27,12 +29,13 @@
     margin-top: 20px;
     font-size: 20px;
     font-weight: 700;
-    color: #ffffff;
+
 }
 .service .service-content .item p {
     text-align: justify;
     font-style: italic;
     font-size: 17px;
+
 }
 .service .service-content-ab{
     position: absolute;

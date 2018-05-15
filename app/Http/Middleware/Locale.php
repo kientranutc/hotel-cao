@@ -17,7 +17,7 @@ class Locale
     public function handle($request, Closure $next)
     {
         if (!session()->has('locale')) {
-            session('locale', config('app.locale'));
+            session('locale', 'vi');
         }
         Lang::setLocale(session('locale'));
 
