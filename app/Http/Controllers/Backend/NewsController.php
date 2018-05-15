@@ -27,6 +27,8 @@ class NewsController extends Controller
         $news =  new News();
         $news->title_en = $request->get('title_en');
         $news->title_vi = $request->get('title_vi');
+        $news->contextual_en = $request->get('contextual_en');
+        $news->contextual_vi = $request->get('contextual_vi');
         $news->slug_en = str_slug($request->get('title_en'),'-');
         $news->slug_vi = str_slug($request->get('title_vi'),'-');
         $news->image = $request->get('image');
@@ -62,12 +64,16 @@ class NewsController extends Controller
         return view('backend.news.edit', compact('editProject'));
     }
 
-    public function processEdit(Requests\UpdateProjectRequest $request,$id)
+    public function processEdit(Requests\UpdateNewsRequest $request,$id)
     {
         $news =  News::find($id);
         if ($news) {
             $news->title_en = $request->get('title_en');
             $news->title_vi = $request->get('title_vi');
+            $news->slug_en = str_slug($request->get('title_en'),'-');
+            $news->slug_vi = str_slug($request->get('title_vi'),'-');
+            $news->contextual_en = $request->get('contextual_en');
+            $news->contextual_vi = $request->get('contextual_vi');
             $news->image = $request->get('image');
             $news->user_create = \Auth::user()->fullname;
             $news->active = $request->get('active');

@@ -14,7 +14,7 @@
 @section('content')
     <div class="panel panel-default table-responsive">
         <div class="panel-heading clearfix">
-            <a href="{{URL::route('project-index')}}" class="btn btn-success">Back to</a>
+            <a href="{{URL::route('news-index')}}" class="btn btn-success">Back to</a>
         </div><!-- /page-title -->
         <div class="panel-heading"><h4 class="text-danger">Add New News</h4> </div>
         <div class="panel-body">
@@ -34,6 +34,23 @@
                                 <label class="control-label">Title Vietnamese</label>
                                 <input type="text" placeholder="Title Vietnamese" value="{{old('title_vi')?old('title_vi'):''}}"  name="title_vi" class="form-control input-sm" data-required="true">
                                 <p class="text-danger"> {{$errors->first('title_vi')}}</p>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                    </div><!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-6 {{($errors->has('contextual_en'))?'has-error':''}}">
+                            <div class="form-group ">
+                                <label class="control-label">Contextual English</label>
+                                <input type="text" placeholder="Contextual English" value="{{old('contextual_en')?old('contextual_en'):''}}"  name="contextual_en" class="form-control input-sm" data-required="true">
+                                <p class="text-danger"> {{$errors->first('contextual_en')}}</p>
+                            </div>
+                        </div><!-- /.col -->
+                        <div class="col-md-6 {{($errors->has('contextual_vi'))?'has-error':''}}">
+                            <div class="form-group ">
+                                <label class="control-label">Contextual Vietnamese</label>
+                                <input type="text" placeholder="Contextual Vietnamese" value="{{old('contextual_vi')?old('contextual_vi'):''}}"  name="contextual_vi" class="form-control input-sm" data-required="true">
+                                <p class="text-danger"> {{$errors->first('contextual_vi')}}</p>
                             </div>
                         </div>
                         <!-- /.col -->

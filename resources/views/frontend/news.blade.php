@@ -26,7 +26,7 @@
                             </div>
                         </a>
                         <div class="post-content">
-                            {!! str_limit($row['description_'.$local],50) !!}
+                            {!! $row['contextual_'.$local] !!}
                         </div>
                         <div class="readMore">
                             <a href="https://demo.mythemeshop.com/ribbon/2017/01/07/a-post-with-everything-in-it/" title="A Post with Everything In It">

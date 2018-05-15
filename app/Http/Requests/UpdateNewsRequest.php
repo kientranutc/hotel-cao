@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class CreateNewsRequest extends Request
+class UpdateNewsRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,10 @@ class CreateNewsRequest extends Request
     public function rules()
     {
         return [
-            'title_en' => 'required|unique:news|max:255',
-            'title_vi' => 'required|unique:news|max:255',
+            'title_en' => 'required|max:255',
+            'title_vi' => 'required|max:255',
             'contextual_en' => 'required|max:255',
             'contextual_vi' => 'required|max:255',
-
             'image' => 'required|max:255',
         ];
     }
