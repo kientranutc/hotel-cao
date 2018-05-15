@@ -29,6 +29,8 @@ return [
         ]
     ],
     'core_why_content' => 'Là một công ty khai thác và phát triển kinh doanh trong nhiều lĩnh vực, chúng tôi nhận thức rằng, để phát triển thì nguồn nhân lực là yếu tố then chốt. Cùng với sự tận tâm và niềm đam mê nhiệt huyết, sự am hiểu thị trường, nắm bắt chính xác thông tin chắc chắn sẽ đem lại những thành quả vượt ngoài sự mong đợi. Hơn thế nữa, chúng tôi hân hoan và trân trọng chia sẻ tất cả các giá trị, lợi ích với đối tác để cùng nhau phát triển bền vững'
+    ,'title_service' => 'Dịch vụ',
+    'title_team' => 'Nhân sự'
 
 ];
 ?>

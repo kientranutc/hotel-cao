@@ -34,6 +34,10 @@ Route::group(['middleware' => 'localization'], function() {
     Route::get('/service', function () {
         return view('frontend.service');
     });
+    Route::get('/news',[
+        'as' => 'news',
+        'uses' => 'Frontend\NewsController@index'
+    ]);
 });
 Route::get('/login', function () {
     return view('backend.login');

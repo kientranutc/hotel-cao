@@ -20,29 +20,19 @@
     <meta property="article:section" content="Cao Hospitality" />
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-
     <!-- font awesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-
     <!-- bootstrap -->
     <link rel="stylesheet" href="{{asset('frontend/assets/bootstrap/css/bootstrap.min.css')}}" />
-
     <!-- uniform -->
     <link type="text/css" rel="stylesheet" href="{{asset('frontend/assets/uniform/css/uniform.default.min.css')}}" />
-
     <!-- animate.css -->
     <link rel="stylesheet" href="{{asset('frontend/assets/wow/animate.css')}}" />
-
-
     <!-- gallery -->
     <link rel="stylesheet" href="{{asset('frontend/assets/gallery/blueimp-gallery.min.css')}}">
-
-
     <!-- favicon -->
     <link rel="shortcut icon" href="{{asset('frontend/images/favicon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{asset('frontend/images/favicon.png')}}" type="image/x-icon">
-
     <link rel="stylesheet" href="{{asset('frontend/assets/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/banner.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/why-us.css')}}">
@@ -93,7 +83,7 @@
                 <li><a class="animated fadeInDown" href="{{url('/')}}#section-why-value">@lang('home.menu.why_choose_us')</a></li>
                 <li><a class="animated fadeInDown" href="{{url('/')}}/team">@lang('home.menu.team')</a></li>
                 <li><a class="animated fadeInDown" href="{{url('/')}}/service">@lang('home.menu.service')</a></li>
-                <li><a class="animated fadeInDown" href="#our-experts-id">@lang('home.menu.news')</a></li>
+                <li><a class="animated fadeInDown" href="{{URL::route('news')}}">@lang('home.menu.news')</a></li>
                 <li><a class="animated fadeInDown" href="{{URL::route('contact')}}">@lang('home.menu.contact')</a></li>
                 <li><div class="language">
                         <a href="{{URL::route('switchLang','en')}}"><img src="{{asset('frontend/assets/img/English.png')}}" alt=""></a>
