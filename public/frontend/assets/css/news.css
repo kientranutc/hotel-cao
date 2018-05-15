@@ -28,7 +28,7 @@
     float: left;
     width: 100%;
 }
-post-info > span {
+.post-info > span {
     margin-right: 7px;
 }
 #featured-thumbnail {
@@ -67,6 +67,7 @@ post-info > span {
     padding: 5px 20px 15px 20px;
     border: 1px solid #cdcdcd;
     overflow: hidden;
+    min-height: 335px;
 }
 
 .post-content {
