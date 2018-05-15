@@ -27,6 +27,8 @@ class NewsController extends Controller
         $news =  new News();
         $news->title_en = $request->get('title_en');
         $news->title_vi = $request->get('title_vi');
+        $news->slug_en = str_slug($request->get('title_en'),'-');
+        $news->slug_vi = str_slug($request->get('title_vi'),'-');
         $news->image = $request->get('image');
         $news->user_create = \Auth::user()->fullname;
         $news->active = $request->get('active');
@@ -81,7 +83,7 @@ class NewsController extends Controller
             $news->description_vi = $request->get('description_vi');
 
             if ($news->save()) {
-                return redirect()->route('project-index')->with('success', 'Edit News sucessfully');
+                return redirect()->route('news-index')->with('success', 'Edit News sucessfully');
             } else {
                 return redirect()->back()->withErrors('Error Edit News');
             }

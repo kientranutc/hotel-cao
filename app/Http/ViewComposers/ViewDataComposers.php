@@ -2,6 +2,7 @@
 
 namespace App\Http\ViewComposers;
 
+use App\Models\Banner;
 use App\Repositories\Banner\BannerRepositoryInterface;
 use App\Repositories\Categories\CategoryRepositoryInterface;
 use App\Repositories\Comment\CommentRepositoryInterface;
@@ -40,20 +41,15 @@ class ViewDataComposers
      */
     public function compose(View $view)
     {
-//        $dataCategory = $this->category->getCategoryActive();
-//        $dataBanner = $this->banner->getBannerActive();
-//        $countCommentDayNow = $this->comment->countCommentDayNow ();
-//        $countOrderDayNow = $this->order->countOrderDayNow ();
-//        $moneyOrder = $this->order->getMoneyOrder();
-//        $view->with(
-//            [
-//                'category'=> $dataCategory,
-//                'banner' => $dataBanner,
-//                'countComment' => $countCommentDayNow,
-//                'countOrder' => $countOrderDayNow,
-//                'moneyOrder' => $moneyOrder
-//
-//            ]);
+        $banner = Banner::where('active',1)->get()->toArray();
+        $local= (session('locale')!= null)?session('locale'):"vi";
+
+        $view->with(
+            [
+                'banner' => $banner,
+                'local' =>$local
+
+            ]);
 
     }
 }

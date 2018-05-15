@@ -131,7 +131,28 @@ span.title-logo {
 .reserve-info{background-color: #fff;}
 
 .services{background-color:#dedbd3; }
-.services .caption{background-color: #b9b2a0;color: #46433b;padding: 1.5em;}
+.services .caption {
+    background-color: #b9b2a0;
+    color: #46433b;
+    padding: 10px 8px;
+    line-height: 1.5em;
+
+}
+.item-news {
+    cursor: pointer;
+}
+.item-news:hover .news-load-more {
+    display: block;
+}
+.news-load-more {
+    position: absolute;
+    top: 40%;
+    left: 47%;
+    font-size: 28px;
+    color: red;
+    display: none;
+    transition: all 0.5s ease;
+}
 .services .caption a {
     color: #ffff;
     font-size: 14px;

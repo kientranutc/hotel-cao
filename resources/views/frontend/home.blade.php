@@ -1,18 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
 {{--projects--}}
-<!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-    _Hasync.push(['Histats.start', '1,4067886,4,406,165,100,00011111']);
-    _Hasync.push(['Histats.fasi', '1']);
-    _Hasync.push(['Histats.track_hits', '']);
-    (function() {
-        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-        hs.src = ('//s10.histats.com/js15_as.js');
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-    })();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4067886&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
 <div class="projects">
     <div class="projects-title">
@@ -23,54 +11,18 @@
     <div class="projects-content">
         <div class="container">
             <div class="row gallery">
+                @forelse($project as $row)
                 <div class="col-sm-4 wowload fadeInUp">
                     <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan_daewoo.jpg')}}" class="img-responsive">
+                        <img src="{{$row['image']}}" class="img-responsive">
                         <div class="info-project">
-                            <p>Dự án x</p>
+                            <p>{{$row['title_'.$local]}}</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-4 wowload fadeInUp">
-                    <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan2.jpg')}}" class="img-responsive">
-                        <div class="info-project">
-                            <p>Dự án x</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 wowload fadeInUp">
-                    <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan.jpg')}}" class="img-responsive">
-                        <div class="info-project">
-                            <p>Dự án x</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 wowload fadeInUp">
-                    <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan2.jpg')}}" class="img-responsive">
-                        <div class="info-project">
-                            <p>Dự án x</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 wowload fadeInUp">
-                    <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan.jpg')}}" class="img-responsive">
-                        <div class="info-project">
-                            <p>Dự án x</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-4 wowload fadeInUp">
-                    <a href="" title="Click để xem chi tiết" class="gallery-image item">
-                        <img src="{{asset('frontend/assets/img/duan2.jpg')}}" class="img-responsive">
-                        <div class="info-project">
-                            <p>Dự án x</p>
-                        </div>
-                    </a>
-                </div>
+                    @empty
+                @endforelse
+
             </div>
         </div>
     </div>
@@ -140,54 +92,24 @@
 <div class="spacer services wowload fadeInUp">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            @forelse($news as $row)
+            <div class="col-sm-4 item-news">
                 <!-- RoomCarousel -->
+
                 <div id="RoomCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="item active"><img src="{{asset('frontend/images/photos/8.jpg')}}" class="img-responsive" alt="slide">
+                        <div class="item active"><img src="{{$row['image']}}" class="img-responsive" alt="slide">
                         </div>
 
                     </div>
                     <!-- Controls -->
-
                 </div>
                 <!-- RoomCarousel-->
-                <div class="caption">Rooms<a href="" class="pull-right">Read more</a></div>
-            </div>
-
-
-            <div class="col-sm-4">
-                <!-- RoomCarousel -->
-                <div id="TourCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="item active"><img src="{{asset('frontend/images/photos/6.jpg')}}" class="img-responsive" alt="slide"></div>
-                        <div class="item  height-full"><img src="{{asset('frontend/images/photos/3.jpg')}}"  class="img-responsive" alt="slide"></div>
-                        <div class="item  height-full"><img src="{{asset('frontend/images/photos/4.jpg')}}"  class="img-responsive" alt="slide"></div>
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#TourCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                    <a class="right carousel-control" href="#TourCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                <div class="caption">{{$row['title_'.$local]}}
                 </div>
-                <!-- RoomCarousel-->
-                <div class="caption">Tour Packages<a href="" class="pull-right">Read more</a></div>
-            </div>
-
-
-            <div class="col-sm-4">
-                <!-- RoomCarousel -->
-                <div id="FoodCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="item active"><img src="{{asset('frontend/images/photos/1.jpg')}}" class="img-responsive" alt="slide"></div>
-                        <div class="item  height-full"><img src="{{asset('frontend/images/photos/2.jpg')}}"  class="img-responsive" alt="slide"></div>
-                        <div class="item  height-full"><img src="{{asset('frontend/images/photos/5.jpg')}}"  class="img-responsive" alt="slide"></div>
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#FoodCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                    <a class="right carousel-control" href="#FoodCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                </div>
-                <!-- RoomCarousel-->
-                <div class="caption">Food and Drinks<a href="" class="pull-right">Read more</a></div>
-            </div>
+                <a href="" class="pull-right news-load-more" ><i class="fa fa-search-plus fa-lg" aria-hidden="true"></i></a></div>
+                @empty
+            @endforelse
         </div>
     </div>
 </div>

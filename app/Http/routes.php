@@ -25,9 +25,10 @@ Route::group(['middleware' => 'localization'], function() {
         'as' => 'contact',
         'uses' => 'Frontend\ContactController@index'
     ]);
-    Route::get('/', function () {
-        return view('frontend.home');
-    });
+    Route::get('/',[
+        'as' => '',
+        'uses' => 'Frontend\HomeController@index'
+    ]);
     Route::get('/team', function () {
         return view('frontend.team');
     });

@@ -28,6 +28,8 @@ class ProjectController extends Controller
         $project =  new Project();
         $project->title_en = $request->get('title_en');
         $project->title_vi = $request->get('title_vi');
+        $project->slug_en = str_slug($request->get('title_en'),'-');
+        $project->slug_vi = str_slug($request->get('title_vi'),'-');
         $project->image = $request->get('image');
         $project->user_create = \Auth::user()->fullname;
         $project->active = $request->get('active');
@@ -67,6 +69,8 @@ class ProjectController extends Controller
         if ($project) {
             $project->title_en = $request->get('title_en');
             $project->title_vi = $request->get('title_vi');
+            $project->slug_en = str_slug($request->get('title_en'),'-');
+            $project->slug_vi = str_slug($request->get('title_vi'),'-');
             $project->image = $request->get('image');
             $project->user_create = \Auth::user()->fullname;
             $project->active = $request->get('active');

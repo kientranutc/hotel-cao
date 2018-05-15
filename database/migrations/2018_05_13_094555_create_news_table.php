@@ -17,6 +17,8 @@ class CreateNewsTable extends Migration
             $table->string('image');
             $table->string('title_en');
             $table->string('title_vi');
+            $table->string('slug_en');
+            $table->string('slug_vi');
             $table->text('description_en');
             $table->text('description_vi');
             $table->string('meta_title_en');
