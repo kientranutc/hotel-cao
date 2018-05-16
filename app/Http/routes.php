@@ -39,6 +39,11 @@ Route::group(['middleware' => 'localization'], function() {
         'as' => 'news',
         'uses' => 'Frontend\NewsController@index'
     ]);
+    Route::get('/news-detail/{id}-{slug}.html',[
+        'as' => 'news-detail',
+        'uses' => 'Frontend\NewsController@showDetail'
+    ]);
+
 });
 Route::get('/login', function () {
     return view('backend.login');

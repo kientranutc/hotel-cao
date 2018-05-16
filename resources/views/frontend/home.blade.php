@@ -107,7 +107,7 @@
                 <!-- RoomCarousel-->
                 <div class="caption">{{$row['title_'.$local]}}
                 </div>
-                <a href="" class="pull-right news-load-more" ><i class="fa fa-search-plus fa-lg" aria-hidden="true"></i></a></div>
+                <a href="{{URL::route('news-detail',['id'=>$row->id, 'slug'=>$row['slug_'.$local]])}}" class="pull-right news-load-more" ><i class="fa fa-search-plus fa-lg" aria-hidden="true"></i></a></div>
                 @empty
             @endforelse
         </div>

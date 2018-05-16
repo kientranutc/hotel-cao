@@ -30,6 +30,7 @@
         ],
         'core_why_content' => 'As a company that exploits and develops business in many areas, we recognize that the key to development is labor force, alongside with passion and enthusiasm, market insight, accurate information capture will surely deliver results beyond expectations. Furthermore, we would like to share all our values and benefits with our partners for sustainable development.'
         ,'title_service' => 'service',
-        'title_team' => 'Our experts'
+        'title_team' => 'Our experts',
+        'title_news_relation' => 'Related Posts'
     ];
 ?>

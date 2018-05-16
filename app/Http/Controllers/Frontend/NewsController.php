@@ -16,4 +16,10 @@ class NewsController extends Controller
         $news = News::where('active', 1)->paginate($limit);
         return view('frontend.news', compact('news'));
     }
+    public function showDetail($id, $slug)
+    {
+        $newsDetail = News::find($id);
+        $newsRelationship = News::where('active', 1)->where('id', '<>' , $id)->get();
+        return view('frontend.news_detail', compact('newsDetail', 'newsRelationship'));
+    }
 }

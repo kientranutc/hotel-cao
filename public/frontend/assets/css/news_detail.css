@@ -1,0 +1,84 @@
+.single_post {
+    background-color: #fff;
+    padding: 20px 25px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+}
+.single-title {
+    float: left;
+    padding: 0 0 0 0;
+    font-size: 32px;
+    line-height: 1em !important;
+    margin-top: 0px !important;
+    color: #444;
+
+}
+
+.post-info {
+    display: block;
+    font-size: 13px;
+    color: #999999;
+    float: left;
+    width: 100%;
+}
+.post-info > span {
+    margin-right: 7px;
+}
+.post-single-content {
+    font-size: 14px;
+    line-height: 22px;
+    float: left;
+    width: 100%;
+    color: #555555;
+    margin-top: 10px;
+}
+.post-single-content p {
+    line-height: 22px;
+}
+
+.post-info a, .single-post .post-info a {
+    color: #999;
+}
+article.article {
+    margin: 30px auto;
+    overflow: hidden;
+    width: 80%;
+}
+header {
+    overflow: hidden;
+}
+.news-related-top h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #444;
+}
+.news-related-top {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.content-news-related {
+
+    list-style: none;
+    margin-right: 4.6%;
+    min-height: 100px;
+    clear: none;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+.content-news-related-title {
+    width: 100%;
+    padding-top: 10px;
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 23px;
+    letter-spacing: initial;
+    color: #444;
+}
