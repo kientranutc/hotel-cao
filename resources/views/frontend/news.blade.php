@@ -20,7 +20,7 @@
                         <div class="post-info">
                             <span class="theauthor"><span><i class="fa fa-user" aria-hidden="true"></i> </span>&nbsp;<a href=""  rel="author">{{$row['user_create']}}</a></span>   <span class="theauthor"><span> &nbsp;  <i class="fa fa-clock-o" aria-hidden="true"></i> </span><a href=""  rel="author">{{$row['created_at']}}</a></span>
                         </div>
-                        <a href="https://demo.mythemeshop.com/ribbon/2017/01/07/a-post-with-everything-in-it/" title="A Post with Everything In It" id="featured-thumbnail">
+                        <a href="{{URL::route('news-detail',['id'=>$row->id, 'slug'=>$row['slug_'.$local]])}}" title="" id="featured-thumbnail">
                             <div class="featured-thumbnail">
                                 <img width="150" height="150" src="{{$row['image']}}" class="attachment-ribbon-lite-featured size-ribbon-lite-featured wp-post-image" alt="" title="" srcset="https://demo.mythemeshop.com/ribbon/files/2017/01/fashion-glasses-go-pro-female-157888-150x150.jpeg 150w, https://demo.mythemeshop.com/ribbon/files/2017/01/fashion-glasses-go-pro-female-157888-60x60.jpeg 60w" sizes="(max-width: 150px) 100vw, 150px">
                             </div>
@@ -29,7 +29,7 @@
                             {!! $row['contextual_'.$local] !!}
                         </div>
                         <div class="readMore">
-                            <a href="https://demo.mythemeshop.com/ribbon/2017/01/07/a-post-with-everything-in-it/" title="A Post with Everything In It">
+                            <a href="{{URL::route('news-detail',['id'=>$row->id, 'slug'=>$row['slug_'.$local]])}}" title="A Post with Everything In It">
                                 @lang('category.load_more') </a>
                         </div>
                     </div>

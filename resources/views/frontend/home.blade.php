@@ -13,7 +13,7 @@
             <div class="row gallery">
                 @forelse($project as $row)
                 <div class="col-sm-4 wowload fadeInUp">
-                    <a href="" title="Click để xem chi tiết" class="gallery-image item">
+                    <a href="{{URL::route('project-detail', ['id'=>$row['id'], 'slug' => $row['slug_'.$local]])}}" title="Click để xem chi tiết" class="gallery-image item">
                         <img src="{{$row['image']}}" class="img-responsive">
                         <div class="info-project">
                             <p>{{$row['title_'.$local]}}</p>
@@ -28,7 +28,7 @@
     </div>
     <div class="load-more">
         <div class="container">
-            <p><a href=""><i class="fa fa-angle-double-right fa-sm animated fadeInLeft" aria-hidden="true"></i> @lang('category.load_more')</a></p>
+            <p><a href="{{URL::route('project')}}"><i class="fa fa-angle-double-right fa-sm animated fadeInLeft" aria-hidden="true"></i> @lang('category.load_more')</a></p>
         </div>
     </div>
 </div>

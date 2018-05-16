@@ -49,19 +49,19 @@
                 </ul>
             </div>
             <div class="col-sm-8 subscribe">
-                <form action="">
+                <form action="{{URL::route('process-contact')}}" method="post">
                     {{csrf_field()}}
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="form-control"  placeholder="@lang('footer.form.name')*" required>
+                            <input type="text" class="form-control" name="name"  placeholder="@lang('footer.form.name')*" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            <input type="email" class="form-control" name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="@lang('footer.form.subject')">
+                            <input type="text" class="form-control" name="content"  placeholder="@lang('footer.form.subject')">
                         </div>
                     </div>
                     <div class="row">

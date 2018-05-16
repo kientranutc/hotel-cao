@@ -43,6 +43,19 @@ Route::group(['middleware' => 'localization'], function() {
         'as' => 'news-detail',
         'uses' => 'Frontend\NewsController@showDetail'
     ]);
+    Route::get('/project-list.html',[
+        'as' => 'project',
+        'uses' => 'Frontend\ProjectController@index'
+    ]);
+    Route::post('/process-contact',[
+        'as' => 'process-contact',
+        'uses' => 'Frontend\ContactController@processContact'
+    ]);
+
+    Route::get('/project-detail/{id}-{slug}.html',[
+        'as' => 'project-detail',
+        'uses' => 'Frontend\ProjectController@detail'
+    ]);
 
 });
 Route::get('/login', function () {
