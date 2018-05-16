@@ -91,9 +91,9 @@
                     </a>
                 </li>
                 @endif
-                <li class="{{(Route::currentRouteName()=='project-index')
+                <li class="{{(Route::currentRouteName()=='contact-index')
                         ?'active':''}}">
-                    <a href="{{URL::route('project-index')}}">
+                    <a href="{{URL::route('contact-index')}}">
 								<span class="menu-icon">
 									<i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
 								</span>

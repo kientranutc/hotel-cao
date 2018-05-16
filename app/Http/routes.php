@@ -187,6 +187,12 @@ Route::group(['middleware' => ['checkLogin']], function() {
                 'uses' => 'Backend\NewsController@delete'
             ]);
         });
+        Route::group(['prefix' => 'contact'], function () {
+            Route::get('', [
+                'as' => 'contact-index',
+                'uses' => 'Backend\ContactController@index'
+            ]);
+        });
         //logout
         Route::get('logout', [
             'as' => 'process-logout',
