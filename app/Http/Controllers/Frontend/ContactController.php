@@ -29,8 +29,5 @@ class ContactController extends Controller
       } else {
           echo "<script>alert('lỗi gửi thông tin liện hệ từ khách hàng')</script>";
       }
-
-
-
     }
 }

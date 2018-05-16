@@ -2,20 +2,20 @@
 @extends('backend.layouts.master')
 @section('title', 'quản lý chung')
 @section('breadcrumb')
-    quản lý chung
+    Dashboard
 @stop
 @section('content')
 
     <div class="main-header clearfix">
         <div class="page-title">
-            <h3 class="no-margin">Quản lý chung</h3>
-            <span>Chào bạn:{{\Auth::user()->username}}</span>
+            <h3 class="no-margin">Dashboard</h3>
+            <span>Wellcome:{{\Auth::user()->username}}</span>
         </div><!-- /page-title -->
 
         <ul class="page-stats">
             <li>
                 <div class="value">
-                    <span>Doanh thu đến hiện tại</span>
+
                 </div>
                 <span id="balances" class="sparkline"></span>
             </li>
