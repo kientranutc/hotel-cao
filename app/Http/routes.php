@@ -81,22 +81,25 @@ Route::group(['middleware' => ['checkLogin']], function() {
         ]);
         //user
         Route::group(['prefix' => 'user'], function () {
-            Route::get('', [
-                'as' => 'user-index',
-                'uses' => 'Backend\UserController@index'
-            ]);
-            Route::get('/create',[
-               'as' => 'user-create',
-               'uses' => 'Backend\UserController@create'
-            ]);
-            Route::post('/create',[
-                'as' => 'user-create',
-                'uses' => 'Backend\UserController@processCreate'
-            ]);
-            Route::get('/delete/{id}', [
-                'as' => 'user-delete',
-                'uses' => 'Backend\UserController@delete'
-            ]);
+
+            Route::group(['middleware' => ['checkRole']], function() {
+                Route::get('', [
+                    'as' => 'user-index',
+                    'uses' => 'Backend\UserController@index'
+                ]);
+                Route::get('/create', [
+                    'as' => 'user-create',
+                    'uses' => 'Backend\UserController@create'
+                ]);
+                Route::post('/create', [
+                    'as' => 'user-create',
+                    'uses' => 'Backend\UserController@processCreate'
+                ]);
+                Route::get('/delete/{id}', [
+                    'as' => 'user-delete',
+                    'uses' => 'Backend\UserController@delete'
+                ]);
+            });
 
         });
         //banner
