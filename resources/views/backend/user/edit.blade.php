@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 @section('title', 'AddBanner')
 @section('breadcrumb')
-    Add User
+    Edit user
 @stop
 @section('link')
     <style>
@@ -14,9 +14,9 @@
 @section('content')
     <div class="panel panel-default table-responsive">
         <div class="panel-heading clearfix">
-            <a href="{{URL::route('user-index')}}" class="btn btn-success">Back to</a>
+
         </div><!-- /page-title -->
-        <div class="panel-heading"><h4 class="text-danger">Add New User</h4> </div>
+        <div class="panel-heading"><h4 class="text-danger">Edit User</h4> </div>
         <div class="panel-body">
             <form class="no-margin" id="formValidate2" action="{{URL::route('user-create')}}" method="post" data-validate="parsley" novalidate>
                 {{csrf_field()}}
@@ -25,7 +25,7 @@
                         <div class="col-md-6 {{($errors->has('username'))?'has-error':''}}">
                             <div class="form-group ">
                                 <label class="control-label">Username</label>
-                                <input type="text" placeholder="Username" value="{{old('username')?old('username'):''}}"  name="username" class="form-control input-sm" data-required="true">
+                                <input type="text" placeholder="Username" disabled="disabled" value="{{old('username')?old('username'):''}}"  name="username" class="form-control input-sm" data-required="true">
                                 <p class="text-danger"> {{$errors->first('username')}}</p>
                             </div>
                         </div><!-- /.col -->
@@ -43,13 +43,13 @@
                         <div class="col-md-6 {{($errors->has('email'))?'has-error':''}}">
                             <div class="form-group">
                                 <label class="control-label">Email</label>
-                                <input type="text" placeholder="Email" value="{{old('email')?old('email'):''}}"  name="email" class="form-control input-sm" data-required="true" data-type="url">
+                                <input type="text" placeholder="Email" disabled="disabled"  value="{{old('email')?old('email'):''}}"  name="email" class="form-control input-sm" data-required="true" data-type="url">
                             </div>
                         </div>
                         <div class="col-md-6 {{($errors->has('image'))?'has-error':''}}">
                             <div class="form-group">
-                                <div id="show-image-add">
-                                    <img src="" class="img-thumbnail"  alt="Cinque Terre" width="304" height="236">
+                                <div id="show-image-add" style="display:block">
+                                    <img src="{{(Auth::user()->image!='')?Auth::user()->image:asset('frontend/assets/img/user-icon.png')}}" class="img-thumbnail"  alt="" width="304" height="236">
                                 </div>
                                 <label class="control-label">Avatar</label>
                                 <input type="text" placeholder="Click to add image" value="{{old('image')?old('image'):''}}"  name="image" class="form-control input-sm input-image" id="image-input" data-required="true" data-type="url">

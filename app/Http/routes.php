@@ -100,6 +100,11 @@ Route::group(['middleware' => ['checkLogin']], function() {
                     'uses' => 'Backend\UserController@delete'
                 ]);
             });
+            Route::get('edit', [
+                'as' => 'user-edit',
+                'uses' => 'Backend\UserController@edit'
+            ]);
+
 
         });
         //banner

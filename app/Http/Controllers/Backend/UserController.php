@@ -22,6 +22,11 @@ class UserController extends Controller
         return view('backend.user.create');
     }
 
+    public function edit()
+    {
+        return view('backend.user.edit');
+    }
+
     public function processCreate(Requests\CreateUserRequest $request)
     {
         $user = new User();

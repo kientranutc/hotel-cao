@@ -47,7 +47,6 @@
                                 </td>
                                 <td class="text-center">{{$item->created_at}}</td>
                                 <td class="text-center">
-                                    <a href="{{URL::route('banner-edit', $item->id)}}" data-toggle="tooltip" title="Edit" class="btn btn-success"><i class="fa fa-edit fa-lg"></i></a>
                                     @if ($item->is_admin !=1)
                                         <a href="{{URL::route('user-delete',$item->id)}}" data-toggle="tooltip" title="Delete" data-toggle="modal"  class="btn btn-danger delete-view"><i class="fa fa-trash-o fa-lg"></i></a>
                                     @endif
