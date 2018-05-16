@@ -82,6 +82,10 @@
     article.article img {
         width: 100%;
     }
+    .service .service-content .item img {
+        width: auto;
+        height: 67px;
+    }
 
 }
 
