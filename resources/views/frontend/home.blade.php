@@ -1,4 +1,9 @@
 @extends('frontend.layouts.master')
+@section('title','Home')
+@section('meta_keyword', 'Home')
+@section('meta_description', 'Home')
+@section('meta_author','Home')
+
 @section('content')
 {{--projects--}}
 <!-- Histats.com  END  -->

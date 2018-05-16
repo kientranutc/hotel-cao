@@ -4,28 +4,28 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+    </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Cao hospitality</h2>
+    <h2 style="color: green">Cao hospitality</h2>
     <p>Thông tin khách hàng liên hệ:</p>
     <table class="table table-bordered">
-        <thead>
+        <thead style="background:#cccccc; color: #FFFFFF">
         <tr>
-            <th>Họ tên</th>
-            <th>Email</th>
-            <th>Nội dung liên hệ</th>
+            <th width="200px" height="35px">Họ tên</th>
+            <th width="200px">Email</th>
+            <th width="300px">Nội dung liên hệ</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>{{$data['name']}}</td>
-            <td>{{$data['email']}}</td>
-            <td>{{$data['content']}}</td>
+            <td style="text-align: center">{{$data['name']}}</td>
+            <td style="text-align: center">{{$data['email']}}</td>
+            <td style="text-align: center">{{$data['content']}}</td>
         </tr>
 
         </tbody>

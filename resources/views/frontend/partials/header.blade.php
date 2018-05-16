@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>CAO-Hospitality @yield('title')</title>
+    <title>CAO-Hospitality |@yield('title')</title>
     <meta http-equiv="content-language" itemprop="inLanguage" content="vi" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta itemprop="description" name="description" content="@yield('meta_description')" />

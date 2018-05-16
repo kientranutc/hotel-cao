@@ -84,11 +84,11 @@
                                     <div class="item  height-full">
                                         <div class="row">
                                             <div class="col-md-5 img">
-                                                <img src="{{asset('frontend/assets/img/ns3.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/img/'.$rows["image"].'')}}" alt="">
                                             </div>
                                             <div class="col-md-5">
-                                                <h3>{{$rows['name']}}</h3>
-                                                <p>{{$rows['level']}}</p>
+                                                <h3 style="text-transform: uppercase">{{$rows['name']}}</h3>
+                                                <p style="text-transform: uppercase">{{$rows['level']}}</p>
                                                 <ul class="team-other">
                                                     @foreach($rows['exp'] as $k=>$v)
                                                         <li>{{$v}}</li>
