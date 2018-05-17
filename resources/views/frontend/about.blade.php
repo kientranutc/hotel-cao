@@ -1,15 +1,14 @@
 @extends('frontend.layouts.master')
+@section('title','team')
+@section('meta_keyword', 'team')
+@section('meta_description', 'team')
+@section('meta_author','team')
 @section('content')
     <div class="container">
 
         <h1 class="title contact-title">@lang('footer.title')</h1>
-
-
         <!-- form -->
         <div class="contact">
-
-
-
             <div class="row">
 
                 <div class="col-sm-12">

@@ -1,4 +1,9 @@
 @extends('frontend.layouts.master')
+@section('title','team')
+@section('meta_keyword', 'team')
+@section('meta_description', 'team')
+@section('meta_author','team')
+
 @section('link')
     <link rel="stylesheet" href="{{asset('frontend/assets/css/team.css')}}">
     @stop

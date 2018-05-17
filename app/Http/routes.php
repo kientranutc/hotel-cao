@@ -100,9 +100,13 @@ Route::group(['middleware' => ['checkLogin']], function() {
                     'uses' => 'Backend\UserController@delete'
                 ]);
             });
-            Route::get('edit', [
+            Route::get('/edit', [
                 'as' => 'user-edit',
                 'uses' => 'Backend\UserController@edit'
+            ]);
+            Route::post('/edit', [
+                'as' => 'user-edit',
+                'uses' => 'Backend\UserController@processEdit'
             ]);
 
 

@@ -1,4 +1,9 @@
 @extends('frontend.layouts.master')
+@section('title','News')
+@section('meta_keyword', 'News')
+@section('meta_description', 'News')
+@section('meta_author','News')
+
 @section('link')
     <link rel="stylesheet" href="{{asset('frontend/assets/css/news.css')}}">
 @stop

@@ -1,4 +1,12 @@
+<?php
+$title = "title_".$local;
+$description = "description_".$local
+?>
 @extends('frontend.layouts.master')
+@section('title',$description)
+@section('meta_keyword', 'product detail')
+@section('meta_description',$projectDetail->$title  )
+@section('meta_author','product detail')
 @section('link')
     <link rel="stylesheet" href="{{asset('frontend/assets/css/news_detail.css')}}">
 @stop
@@ -11,10 +19,6 @@
                         <div class="single_post">
                             <header>
                                 <!-- Start Title -->
-                                <?php
-                                $title = "title_".$local;
-                                $description = "description_".$local
-                                ?>
                                 <h1 class="title single-title">{{$projectDetail->$title }}</h1>
                                 <!-- End Title -->
                                 <!-- Start Post Meta -->

@@ -23,7 +23,7 @@
     </div><!-- /main-header -->
 
     <div class="grey-container shortcut-wrapper">
-        <h2 class="text-center">Quản lý hệ thống website Cao-hospitality</h2>
+        <h2 class="text-center">Quản lý website Cao-hospitality</h2>
         <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
         <!-- Histats.com  START  (aync)-->
         <script type="text/javascript">var _Hasync= _Hasync|| [];
