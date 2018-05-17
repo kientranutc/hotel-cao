@@ -31,6 +31,12 @@
         'core_why_content' => 'As a company that exploits and develops business in many areas, we recognize that the key to development is labor force, alongside with passion and enthusiasm, market insight, accurate information capture will surely deliver results beyond expectations. Furthermore, we would like to share all our values and benefits with our partners for sustainable development.'
         ,'title_service' => 'service',
         'title_team' => 'Our experts',
-        'title_news_relation' => 'Related Posts'
+        'title_news_relation' => 'Related Posts',
+        'about' => [
+            'title' => 'ABOUT US',
+            'content' => 'Our company was born with the desire to meet the needs of business development in a sustainable way, creating a bridge between customers and businesses.
+With the relentless efforts of the management and members, our company has been supporting companies and businesses to reach out to potential marketers and maximize revenue. Set up business plan, brand consulting, in-depth training .
+'
+        ],
     ];
 ?>
