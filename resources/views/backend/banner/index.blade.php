@@ -23,8 +23,8 @@
                         <th width="15%" class="text-center">Title Vietnamese</th>
                         <th width="10%" class="text-center">Image</th>
                         <th width="10%" class="text-center">Active</th>
-                        <th width="10%" class="text-center">Create date</th>
                         <th width="10%" class="text-center">User create</th>
+                        <th width="10%" class="text-center">Create date</th>
                         <th width="10%" class="text-center"></th>
                     </tr>
                     </thead>

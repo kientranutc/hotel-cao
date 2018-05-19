@@ -3,7 +3,7 @@ $title = "title_".$local;
 $description = "description_".$local
 ?>
 @extends('frontend.layouts.master')
-@section('title',$description)
+@section('title',$projectDetail->$title )
 @section('meta_keyword', 'product detail')
 @section('meta_description',$projectDetail->$title  )
 @section('meta_author','product detail')

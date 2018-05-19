@@ -12,6 +12,7 @@ return [
         'team' => 'Nhân sự',
         'service' => 'Dịch vụ',
         'news' => 'Tin tức',
-        'contact' => 'Liên hệ'
+        'contact' => 'Liên hệ',
+        'project' => 'Dự án'
     ]
 ];

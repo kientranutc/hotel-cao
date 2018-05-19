@@ -1,8 +1,8 @@
 @extends('frontend.layouts.master')
-@section('title','team')
-@section('meta_keyword', 'team')
-@section('meta_description', 'team')
-@section('meta_author','team')
+@section('title',trans('home.menu.contact'))
+@section('meta_keyword', trans('home.menu.contact'))
+@section('meta_description',trans('home.menu.contact'))
+@section('meta_author',trans('home.menu.contact'))
 @section('link')
     <style>
         .about-content {
