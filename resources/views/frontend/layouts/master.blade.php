@@ -13,20 +13,20 @@
             <div class="item active">
                 <img src="{{asset('frontend/assets/img/banner1.jpg')}}" class="img-responsive" alt="slide">
                 <div class="banner-content">
-                    <p class="animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, veniam!</p>
-                    <p class="animated fadeInUp"><a href="">Read more</a></p>
+                    <p class="animated fadeInDown text-center">Cao hospitality</p>
+                    <p class="animated fadeInUp"><a href="/">@lang('category.read_more')</a></p>
                 </div>
             </div>
             <div class="item  height-full"><img src="{{asset('frontend/assets/img/banner2.jpg')}}"  class="img-responsive" alt="slide">
                 <div class="banner-content">
-                    <p class="animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, veniam!</p>
-                    <p class="animated fadeInUp"><a href="">Read more</a></p>
+                    <p class="animated fadeInDown text-center">Cao hospitality</p>
+                    <p class="animated fadeInUp"><a href="/">@lang('category.read_more')</a></p>
                 </div>
             </div>
             <div class="item  height-full"><img src="{{asset('frontend/assets/img/banner1.jpg')}}"  class="img-responsive" alt="slide">
                 <div class="banner-content">
-                    <p class="animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, veniam!</p>
-                    <p class="animated fadeInUp"><a href="">Read more</a></p>
+                    <p class="animated fadeInDown text-center">Cao hospitality</p>
+                    <p class="animated fadeInUp"><a href="/">@lang('category.read_more')</a></p>
                 </div>
             </div>
         </div>
@@ -48,8 +48,8 @@
                 <div class="item active">
                     <img src="{{current($banner)['image']}}" class="img-responsive" alt="slide">
                     <div class="banner-content">
-                        <p class="animated fadeInDown"> {{str_limit(current($banner)['title_'.$local], 12)}}</p>
-                        <p class="animated fadeInUp"><a href="{{current($banner)['url']}}">Read more</a></p>
+                        <p class="animated fadeInDown"> {{current($banner)['title_'.$local]}}</p>
+                        <p class="animated fadeInUp"><a href="{{current($banner)['url']}}">@lang('category.read_more')</a></p>
                     </div>
                 </div>
                 <?php
@@ -58,8 +58,8 @@
                 @foreach($banner as $row)
                 <div class="item  height-full"><img src="{{$row['image']}}"  class="img-responsive" alt="slide">
                     <div class="banner-content">
-                        <p class="animated fadeInDown">{{str_limit($row['title_'.$local], 12)}}</p>
-                        <p class="animated fadeInUp"><a href="">Read more</a></p>
+                        <p class="animated fadeInDown">{{$row['title_'.$local] }}</p>
+                        <p class="animated fadeInUp"><a href="{{$row['url']}}">@lang('category.read_more')</a></p>
                     </div>
                 </div>
                 @endforeach

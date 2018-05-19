@@ -12,7 +12,7 @@ class ProjectController extends Controller
 {
     public function  index()
     {
-        $limit = 1;
+        $limit = 9;
         $projectList = Project::where('active',1)->paginate($limit);
         return view('frontend.project', compact('projectList'));
     }

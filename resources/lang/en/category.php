@@ -1,6 +1,8 @@
 <?php
     return [
+        'go_back'=>'Go back',
         'load_more' => 'Load more',
+        'read_more' => 'Read more',
         'title' =>[
             'project' => 'OUR PROJECT',
             'core_value' => 'CORE VALUE AND WHY CHOOSE US',

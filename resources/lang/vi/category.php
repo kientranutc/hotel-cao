@@ -1,6 +1,8 @@
 <?php
 return [
+    'go_back'=>'Về trang chủ',
     'load_more' => 'Xem thêm',
+    'read_more' => 'Xem thêm',
     'title' =>[
         'project' => 'ĐỐI TÁC CỦA CHÚNG TÔI',
         'core_value' => 'GIÁ TRỊ CỐT LÕI',

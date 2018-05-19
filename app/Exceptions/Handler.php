@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Lang;
+use Session;
 
 class Handler extends ExceptionHandler
 {
@@ -46,7 +48,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-//
+        if (session()->has('locale')) {
+            Lang::setLocale(session('locale'));
+        } else {
+            Lang::setLocale(session('locale', 'en'));
+        }
         return parent::render($request, $e);
     }
 }

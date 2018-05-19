@@ -86,6 +86,9 @@
         width: auto;
         height: 67px;
     }
+    .img-404 img {
+        width: 100%;
+    }
 
 }
 

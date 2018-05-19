@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>CAO-Hospitality |@yield('title')</title>
+    <title>Cao-Hospitality | @yield('title')</title>
     <meta http-equiv="content-language" itemprop="inLanguage" content="vi" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta itemprop="description" name="description" content="@yield('meta_description')" />
@@ -31,8 +31,8 @@
     <!-- gallery -->
     <link rel="stylesheet" href="{{asset('frontend/assets/gallery/blueimp-gallery.min.css')}}">
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{asset('frontend/images/favicon.png')}}" type="image/x-icon">
-    <link rel="icon" href="{{asset('frontend/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('frontend/images/icon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('frontend/images/icon.ico')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('frontend/assets/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/banner.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/why-us.css')}}">
@@ -70,7 +70,7 @@
             </button>
             <a class="navbar-brand" href="/">
           <span class="logo-content">
-              <img src="{{asset('frontend/assets/img/logo_1.jpg')}}"  alt="{{asset('frontend/assets/img/logo_1.jpg')}}">
+              <img src="{{asset('frontend/assets/img/logo_2.jpg')}}"  alt="{{asset('frontend/assets/img/logo_2.jpg')}}">
           </span>
             </a>
         </div>

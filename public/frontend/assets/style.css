@@ -107,12 +107,12 @@ span.title-logo {
     position: relative;
     display: block;
 }
-.logo-content img {
-    width: 250px;
-    height: 115px;
-}
 /*nav*/
-
+.item-news .carousel-inner>.item>img,.item-news .carousel-inner>.item>a>img {
+    line-height: 1;
+    width: 360px;
+    height: 225px;
+}
 
 
 /*SLIDER*/

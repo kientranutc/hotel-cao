@@ -72,12 +72,7 @@
                         ?>
 
                         <div id="OurExpertCarousels" class="carousels slide" data-ride="carousels">
-                            <ol class="carousel-indicators">
-                                <li data-target="#OurExpertCarousels" data-slide-to="0" class="active"></li>
-                                @for($i=1; $i<count($team); $i++)
-                                <li data-target="#OurExpertCarousels" data-slide-to="{{$i}}"></li>
-                                @endfor
-                            </ol>
+
 
                             <div class="carousel-inner">
 
