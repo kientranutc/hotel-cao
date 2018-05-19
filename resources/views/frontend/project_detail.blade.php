@@ -13,8 +13,10 @@ $description = "description_".$local
 @section('content')
     <div class="news-detail">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-12">
+
                     <article class="article">
                         <div class="single_post">
                             <header>
