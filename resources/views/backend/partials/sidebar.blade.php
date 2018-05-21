@@ -103,6 +103,17 @@
                         <span class="menu-hover"></span>
                     </a>
                 </li>
+                <li>
+                    <a href="/admin/file-image">
+								<span class="menu-icon">
+									<i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+								</span>
+                        <span class="text">
+									File Image
+								</span>
+                        <span class="menu-hover"></span>
+                    </a>
+                </li>
 
 
 

@@ -210,6 +210,9 @@ Route::group(['middleware' => ['checkLogin']], function() {
             'as' => 'process-logout',
             'uses' => 'Backend\AuthController@logout'
         ]);
+        Route::get('file-image',function (){
+            return view('backend.fileimage.index');
+        });
 
     });
 });
