@@ -1,8 +1,8 @@
 @extends('frontend.layouts.master')
-@section('title','service')
-@section('meta_keyword', 'service')
-@section('meta_description', 'service')
-@section('meta_author','service')
+@section('title',trans('home.menu.service'))
+@section('meta_keyword', trans('home.menu.service'))
+@section('meta_description',trans('home.menu.service'))
+@section('meta_author',trans('home.menu.service'))
 
 @section('link')
     <link rel="stylesheet" href="{{asset('frontend/assets/css/service.css')}}">
@@ -72,12 +72,7 @@
                         ?>
 
                         <div id="OurExpertCarousels" class="carousels slide" data-ride="carousels">
-                            <ol class="carousel-indicators">
-                                <li data-target="#OurExpertCarousels" data-slide-to="0" class="active"></li>
-                                @for($i=1; $i<count($team); $i++)
-                                <li data-target="#OurExpertCarousels" data-slide-to="{{$i}}"></li>
-                                @endfor
-                            </ol>
+
 
                             <div class="carousel-inner">
 

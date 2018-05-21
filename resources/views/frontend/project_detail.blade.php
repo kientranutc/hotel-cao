@@ -3,7 +3,7 @@ $title = "title_".$local;
 $description = "description_".$local
 ?>
 @extends('frontend.layouts.master')
-@section('title',$description)
+@section('title',$projectDetail->$title )
 @section('meta_keyword', 'product detail')
 @section('meta_description',$projectDetail->$title  )
 @section('meta_author','product detail')
@@ -13,8 +13,10 @@ $description = "description_".$local
 @section('content')
     <div class="news-detail">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-12">
+
                     <article class="article">
                         <div class="single_post">
                             <header>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.master')
-@section('title','Home')
-@section('meta_keyword', 'Home')
-@section('meta_description', 'Home')
-@section('meta_author','Home')
+@section('title',trans('home.menu.home'))
+@section('meta_keyword', trans('home.menu.home'))
+@section('meta_description', trans('home.menu.home'))
+@section('meta_author',trans('home.menu.home'))
 
 @section('content')
 {{--projects--}}

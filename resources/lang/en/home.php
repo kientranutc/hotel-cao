@@ -12,6 +12,7 @@ return [
         'team' => 'Team',
         'service' => 'Service',
         'news' => 'News',
-        'contact' => 'Contact'
+        'contact' => 'Contact',
+        'project' => 'Our Project'
     ]
 ];

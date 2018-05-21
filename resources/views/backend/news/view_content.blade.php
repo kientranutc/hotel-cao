@@ -26,6 +26,8 @@
                             <p><b class="text-danger">Meta title:</b>{{$showContent->meta_title_en}}</p>
                             <p><b class="text-danger">Meta description:</b>{{$showContent->meta_description_en}}</p>
                             <p><b class="text-danger">Meta keyword:</b>{{$showContent->meta_keyword_en}}</p>
+                            <p><b class="text-danger">Contextual:</b>{{$showContent->contextual_en}}</p>
+
                             <hr>
                             <div style="padding: 10px; text-align: justify; margin-top: 20px; font-size: 14px">
                                 {!! $showContent->description_en !!}
@@ -35,6 +37,7 @@
                             <p><b class="text-danger">Meta title:</b>{{$showContent->meta_title_vi}}</p>
                             <p><b class="text-danger">Meta description:</b>{{$showContent->meta_description_vi}}</p>
                             <p><b class="text-danger">Meta keyword:</b>{{$showContent->meta_keyword_vi}}</p>
+                            <p><b class="text-danger">Contextual:</b>{{$showContent->contextual_vi}}</p>
                             <hr>
                             <div style="padding: 10px; text-align: justify; margin-top: 20px; font-size: 14px">
                                 {!! $showContent->description_vi !!}
