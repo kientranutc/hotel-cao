@@ -167,6 +167,11 @@ span.title-logo {
 .pull-right {
     float: right;
 }
+._2pi3 {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    display: none !important;
+}
 .services .caption a:hover{color: #fff;}
 .carousel-control{width: 10%;background: none !important;}
 .carousel-control i.fa{position: absolute;left: 0;right: 0;top: 50%;margin-top: -10px;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -10,6 +10,7 @@
     <meta name="keywords" itemprop="keywords" content="@yield('meta_keyword')" />
     <meta name="author" itemprop="author" content="@yield('meta_author')" />
     <meta name="robots" content="index,follow" />
+    <meta property="fb:app_id" content="100876217015412" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:title" content="cao hospitality" />
@@ -46,8 +47,6 @@
 </head>
 
 <body id="home">
-
-
 <!-- top
   <form class="navbar-form navbar-left newsletter" role="search">
         <div class="form-group">

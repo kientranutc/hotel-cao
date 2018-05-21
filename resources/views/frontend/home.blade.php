@@ -37,8 +37,6 @@
         </div>
     </div>
 </div>
-
-
 <section id="section-why-value">
     <div class="why-value-title">
         <div class="container">
