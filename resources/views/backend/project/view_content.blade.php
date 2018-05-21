@@ -9,6 +9,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
+                    <p><b class="text-danger">Link:</b> <a href="{{$showContent->url}}">{{$showContent->url}}</a></p>
+                    <p><b class="text-danger">Project status:</b> {{($showContent->project_old==1)?'New':'Old'}}</p>
                 <div class="panel-heading">
                      Content Our Project
                 </div>

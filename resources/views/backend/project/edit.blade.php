@@ -39,6 +39,34 @@
                         <!-- /.col -->
                     </div><!-- /.row -->
                     <div class="row">
+                        <div class="col-md-6 {{($errors->has('url'))?'has-error':''}}">
+                            <div class="form-group ">
+                                <label class="control-label">Link</label>
+                                <input type="text" placeholder="Link" value="{{old('url')?old('url'):$editProject->url}}"  name="url" class="form-control input-sm" data-required="true">
+                                <p class="text-danger"> {{$errors->first('url')}}</p>
+                            </div>
+                        </div><!-- /.col -->
+                        <div class="col-md-6 {{($errors->has('project_old'))?'has-error':''}}">
+                            <div class="form-group">
+                                <label class="control-label">Project status</label>
+                                <div class="form-group">
+                                    <label class="label-radio inline">
+                                        <input type="radio"  {{($editProject->project_old==1)?"checked":""}} value="1" checked name="project_old">
+                                        <span class="custom-radio"></span>
+                                        News
+                                    </label>
+                                    <label class="label-radio inline">
+                                        <input type="radio" value="0" {{($editProject->project_old==0)?"checked":""}} name="project_old">
+                                        <span class="custom-radio"></span>
+                                        Old
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <div class="row">
                         <div class="col-md-6 {{($errors->has('image'))?'has-error':''}}">
                             <div class="form-group">
                                 <div id="show-image-add" style="display: {{($editProject->image!='')?'block':''}}">

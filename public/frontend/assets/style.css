@@ -106,6 +106,7 @@ span.title-logo {
 .logo-content {
     position: relative;
     display: block;
+    padding: 10px 0px;
 }
 /*nav*/
 .item-news .carousel-inner>.item>img,.item-news .carousel-inner>.item>a>img {

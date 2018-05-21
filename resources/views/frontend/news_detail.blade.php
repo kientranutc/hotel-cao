@@ -39,7 +39,13 @@ $description = "description_".$local
                         <div id="content" class="post-single-content box mark-links">
                             {!! $newsDetail->$description !!}
                         </div>
+                        <div id="fb-root"></div>
+
+
+                        <div class="fb-comments" data-href="{{ URL::current()}}"
+                             data-width="100%" data-numposts="5"></div>
                     </div>
+
                       <div class="news-relationship">
                           <div class="news-related-top">
                               <h3>@lang('category.title_news_relation')</h3>
@@ -61,17 +67,7 @@ $description = "description_".$local
                               @endforelse
                           </div>
                       </div>
-                      <div id="fb-root"></div>
-                      <script>(function(d, s, id) {
-                              var js, fjs = d.getElementsByTagName(s)[0];
-                              if (d.getElementById(id)) return;
-                              js = d.createElement(s); js.id = id;
-                              js.src =   "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=100876217015412";
-                              fjs.parentNode.insertBefore(js, fjs);
-                          }(document, 'script', 'facebook-jssdk'));</script>
 
-                      <div class="fb-comments" data-href="{{ URL::current()}}"
-                           data-width="100%" data-numposts="5"></div>
                   </article>
               </div>
           </div>

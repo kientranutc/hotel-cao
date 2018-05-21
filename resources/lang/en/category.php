@@ -1,5 +1,6 @@
 <?php
     return [
+        'register'=>'REGISTER',
         'go_back'=>'Go back',
         'load_more' => 'Load more',
         'read_more' => 'Read more',

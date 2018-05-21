@@ -1,5 +1,6 @@
 <?php
 return [
+    'register'=>'ĐĂNG KÝ',
     'go_back'=>'Về trang chủ',
     'load_more' => 'Xem thêm',
     'read_more' => 'Xem thêm',

@@ -11,7 +11,7 @@
         <div class="user-block clearfix">
             <img src="{{(Auth::user()->image!="")?Auth::user()->image:asset('frontend/assets/img/user-icon.png')}}" alt="User Avatar">
             <div class="detail">
-                <strong>John Doe</strong><span class="badge badge-danger m-left-xs bounceIn animation-delay4"></span>
+                <strong>{{Auth::user()->fullname}}</strong><span class="badge badge-danger m-left-xs bounceIn animation-delay4"></span>
                 <ul class="list-inline">
 
                 </ul>

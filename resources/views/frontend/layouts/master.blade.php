@@ -78,5 +78,11 @@
 </div>
 <!-- banner-->
 <!-- reservation-information -->
-
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src =   "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=100876217015412";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 @include('frontend.partials.footer')

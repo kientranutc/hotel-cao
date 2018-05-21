@@ -39,6 +39,14 @@ $description = "description_".$local
                             <div id="content" class="post-single-content box mark-links">
                                 {!! $projectDetail->$description !!}
                             </div>
+                            <div class="register-project">
+                                <p><a style="border-radius: 4px"  class="btn btn-success" href="{{$projectDetail->url}}"><i class="fa fa-share" aria-hidden="true"></i> @lang('category.register')</a></p>
+                            </div>
+                            <div id="fb-root"></div>
+
+
+                            <div class="fb-comments" data-href="{{ URL::current()}}"
+                                 data-width="100%" data-numposts="5"></div>
                         </div>
 
                     </article>
