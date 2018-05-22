@@ -211,8 +211,14 @@ Route::group(['middleware' => ['checkLogin']], function() {
             'uses' => 'Backend\AuthController@logout'
         ]);
         Route::get('file-image',function (){
-            return view('backend.fileimage.index');
+            $logo = \App\Models\Logo::first();
+            return view('backend.fileimage.index', compact('logo'));
         });
+        Route::post('change-logo', [
+            'as' => 'change-logo',
+            'uses' => 'Backend\BannerController@changeLogo'
+        ]);
+
 
     });
 });

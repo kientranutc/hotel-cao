@@ -69,7 +69,7 @@
             </button>
             <a class="navbar-brand" href="/">
           <span class="logo-content">
-              <img src="{{asset('frontend/assets/img/logo_png1.png')}}"  alt="{{asset('frontend/assets/img/logo_png1.png')}}">
+              <img src="{{($logo->image!='')?$logo->image:asset('frontend/assets/img/logo_png1.png')}}"  alt="{{($logo->image!='')?$logo->image:asset('frontend/assets/img/logo_png1.png')}}">
           </span>
             </a>
         </div>

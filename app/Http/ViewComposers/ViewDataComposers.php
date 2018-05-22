@@ -3,6 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use App\Models\Banner;
+use App\Models\Logo;
 use App\Repositories\Banner\BannerRepositoryInterface;
 use App\Repositories\Categories\CategoryRepositoryInterface;
 use App\Repositories\Comment\CommentRepositoryInterface;
@@ -42,12 +43,14 @@ class ViewDataComposers
     public function compose(View $view)
     {
         $banner = Banner::where('active',1)->get()->toArray();
+        $logo = Logo::first();
         $local= (session('locale')!= null)?session('locale'):"vi";
 
         $view->with(
             [
                 'banner' => $banner,
-                'local' =>$local
+                'local' =>$local,
+                'logo' => $logo
 
             ]);
 

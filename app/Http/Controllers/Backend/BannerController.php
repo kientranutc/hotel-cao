@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Banner;
+use App\Models\Logo;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -69,5 +70,21 @@ class BannerController extends Controller
         } else {
             return redirect()->back()->withErrors('Error delete Banner');
         }
+    }
+
+    public function  changeLogo(Request $request)
+    {
+        $logo = Logo::find(1);
+        if ($logo) {
+            $image = $request->get('image');
+            $logo->image = $image;
+            if ($logo->save()) {
+                return redirect()->back()->with('success', ' Update logo sucessfully');
+            } else {
+                return redirect()->back()->withErrors('Error update logo');
+            }
+        }
+
+
     }
 }
