@@ -68,10 +68,10 @@ header {
     padding: 0;
     border: none;
     overflow: hidden;
+    background: #ddd;
 }
 .content-news-related-title {
     width: 100%;
-    padding-top: 10px;
     float: left;
     margin-top: 0;
     margin-bottom: 0;
@@ -81,4 +81,5 @@ header {
     line-height: 23px;
     letter-spacing: initial;
     color: #444;
+    padding: 5px;
 }

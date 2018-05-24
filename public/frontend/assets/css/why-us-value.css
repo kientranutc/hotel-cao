@@ -11,6 +11,11 @@
     color: #fff;
     font-size: 1.9em;
 }
+.why-us-value {
+    background:url("../img/logo_png1.png") no-repeat;
+    background-size:90% 500px;
+    background-position: 100px 10px;
+}
 .why-us-value .item h4 {
     text-transform: uppercase;
     text-align: center;
@@ -22,7 +27,6 @@
     padding: 10px;
 }
 .why-us-value-content {
-    background: #ddd;
     padding: 10px;
 }
 .why-us-value-content ul {
